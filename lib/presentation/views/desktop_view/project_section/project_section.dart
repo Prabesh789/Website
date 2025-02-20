@@ -40,6 +40,7 @@ class _ProjectSectionState extends State<ProjectSection> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(height: 100),
           SizedBox(
             width: width * 0.5,
             child: Text(
