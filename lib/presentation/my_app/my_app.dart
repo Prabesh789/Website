@@ -1,7 +1,7 @@
 // presentation/my_app/my_app.dart
 import 'package:flutter/material.dart';
 import 'package:portfolio_web/presentation/utils/extensions/theme.dart';
-import 'package:portfolio_web/presentation/views/home/home_page.dart';
+import 'package:portfolio_web/presentation/views/main_view.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
       title: 'raiprabesh',
       debugShowCheckedModeBanner: false,
       theme: context.theme(),
-      home: HomePage(),
+      home: MainView(),
     );
   }
 }
