@@ -358,11 +358,11 @@ class _ProjectState extends State<Project> {
                   ? MouseRegion(
                     onEnter:
                         (_) => setState(
-                          () => _isDashboardHovered = true,
+                          () => _isPlayConsoleHovered = true,
                         ), // When mouse enters
                     onExit:
                         (_) => setState(
-                          () => _isDashboardHovered = false,
+                          () => _isPlayConsoleHovered = false,
                         ), // When mouse exits
                     child: GestureDetector(
                       onTap: () => launchURL(widget.appStoreLink), // Open URL
@@ -376,7 +376,7 @@ class _ProjectState extends State<Project> {
                         ),
                         decoration: BoxDecoration(
                           color:
-                              _isDashboardHovered
+                              _isPlayConsoleHovered
                                   ? kGrey300
                                   : Colors.transparent, // Hover color effect
                           border: Border.all(color: Colors.black, width: 1),
