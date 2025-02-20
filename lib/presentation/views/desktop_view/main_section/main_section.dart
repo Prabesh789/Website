@@ -9,8 +9,10 @@ import 'package:portfolio_web/presentation/views/desktop_view/footer_section/foo
 import 'package:portfolio_web/presentation/views/desktop_view/home_section/home_section.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/main_section/widget/arrow_on_top.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/nav_bar/nav_bar.dart';
-import 'package:portfolio_web/presentation/views/project_section/project_section.dart';
+import 'package:portfolio_web/presentation/views/desktop_view/project_section/project_section.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+
+final ItemScrollController itemScrollController = ItemScrollController();
 
 class MainSection extends StatefulWidget {
   const MainSection({super.key});
@@ -23,7 +25,7 @@ class _HomeSectionState extends State<MainSection> {
   final ScrollController _scrollController = ScrollController(
     initialScrollOffset: 25.0,
   );
-  final ItemScrollController _itemScrollController = ItemScrollController();
+  // final ItemScrollController itemScrollController = ItemScrollController();
   final ItemPositionsListener _itemPositionListener =
       ItemPositionsListener.create();
   final List<String> _sectionsName = [
@@ -35,7 +37,7 @@ class _HomeSectionState extends State<MainSection> {
   ];
 
   void _scroll(int i) {
-    _itemScrollController.scrollTo(index: i, duration: Duration(seconds: 1));
+    itemScrollController.scrollTo(index: i, duration: Duration(seconds: 1));
   }
 
   final List<IconData> _sectionsIcons = [
@@ -48,8 +50,7 @@ class _HomeSectionState extends State<MainSection> {
 
   Widget sectionWidget(int i) {
     if (i == 0) {
-      // return HomeSection();
-      return ProjectSection();
+      return HomeSection();
     } else if (i == 1) {
       return AboutSection();
     } else if (i == 2) {
@@ -74,7 +75,7 @@ class _HomeSectionState extends State<MainSection> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: kWhite,
         elevation: 0.0,
         title: NavBarLogo(),
         actions: [
@@ -83,7 +84,8 @@ class _HomeSectionState extends State<MainSection> {
         ],
       ),
       drawer: MediaQuery.of(context).size.width < 760 ? _appBarMobile() : null,
-      body: SizedBox(
+      body: Container(
+        color: kWhite,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: RawScrollbar(
@@ -91,7 +93,7 @@ class _HomeSectionState extends State<MainSection> {
           thumbColor: kTeal200,
           thickness: 4.0,
           child: ScrollablePositionedList.builder(
-            itemScrollController: _itemScrollController,
+            itemScrollController: itemScrollController,
             itemPositionsListener: _itemPositionListener,
             itemCount: 6,
             itemBuilder: (context, index) {

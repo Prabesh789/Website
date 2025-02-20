@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
 import 'package:portfolio_web/presentation/utils/social_medial_icon.dart';
+import 'package:portfolio_web/presentation/views/desktop_view/main_section/main_section.dart';
 
 class HomeSection extends StatefulWidget {
   const HomeSection({super.key});
@@ -97,14 +98,22 @@ class Overview extends StatelessWidget {
         ),
         SizedBox(height: 16),
         Text(
-          "I am a Computer Science Graduate pursuing \n Post-Graduate In Business Analytics at Lambton College.",
+          "I am a Computer Science Graduate pursuing \nPost-Graduate In Business Analytics at Lambton College.",
           style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
           textAlign: TextAlign.start, // Aligns the text properly
           softWrap: true, // Ensures text wraps properly
           overflow: TextOverflow.visible, // Avoids text being clipped
         ),
         SizedBox(height: 16),
-        Text("Learn more ->", style: TextStyle(fontSize: 13)),
+        InkWell(
+          onTap: () {
+            itemScrollController.scrollTo(
+              index: 1,
+              duration: Duration(seconds: 1),
+            );
+          },
+          child: Text("Learn more ->", style: TextStyle(fontSize: 13)),
+        ),
       ],
     );
   }

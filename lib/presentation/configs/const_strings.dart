@@ -19,88 +19,50 @@ void launchURL(String url) async =>
         ? await launchUrl(Uri.parse(url))
         : throw 'Could not launch $url';
 
-// Community
-final kCommunityLogo = [
-  'assets/cui.png',
-  'assets/flutterIsl.png',
-  'assets/dsc.png',
-];
-
-final kCommunityLinks = [
-  "https://www.comsats.edu.pk/",
-  "https://web.facebook.com/FlutterIslamabadPakistan/",
-  "https://dsc.community.dev/comsats-university-islamabad/",
-];
-
-// Tools & Tech
-final kTools = ["Flutter", "Dart", "Python", "Java", "Git"];
-
-final kTools1 = ["HTML", "CSS", "Bootstrap", "JavaScript"];
-
-// services
-final kServicesIcons = [
-  "assets/services/app.png",
-  "assets/services/ui.png",
-  "assets/services/open.png",
-];
-
-final kServicesTitles = [
-  "Full App Development",
-  "Web Development",
-  "Open Source - GitHub",
-];
-
-final kServicesDescriptions = [
-  "Currently, I am only involved in developing Android Apps using Flutter, I am not able to develop for iOS as I don't own a MacBook currently, so can't test or debug apps for iOS. Hopefully I will get one and start my journey in iOS development too. :)",
-  "Although I'm mainly a flutter mobile app developer but I also love to develop websites, I can design and develop websites as per your need. So, feel free to ask me for getting you a website done.",
-  "I'm trying to learn every new emerging technologies out there and in journey of learning, I would love to contribute to open source community too more in upcoming days which will definately help other developers.\nCheck out my GitHub Profile @roshandroids also my Gitlab profile @roshanode",
-];
-
-final kServicesLinks = [
-  "https://play.google.com/store/apps/developer?id=Roshan+Shrestha",
-  "https://roshansth.com.np/",
-  "https://github.com/roshandroids",
-];
-
 // projects
 final kProjectsBanner = [
-  "assets/projects/digital_krishi.png",
+  "assets/trekking.jpg",
   "assets/projects/dogtor.png",
   "assets/projects/easy_csp.png",
   "assets/projects/pdf_slot.png",
   "assets/projects/roshanfolio.png",
 ];
 
-final kProjectsIcons = [
-  "assets/projects/digital_krishi_logo.png",
-  "assets/projects/dogtor_logo.png",
-  "assets/projects/easycsp_logo.png",
-  "assets/projects/pdf_slot_logo.png",
-  "assets/projects/roshanfolio_logo.png",
-];
-
-final kProjectsTitles = [
-  "Digital Krishi",
-  "Dogtor",
-  "Easy CSP",
-  "PDF Slot",
-  "Roshanfolio",
-];
-
-final kProjectsDescriptions = [
-  "Digital Krishi is a mobile application that tends to provide a digital solution related to agriculture. Providing a common platform to share issues and search for solution related to agriculture can really help farmers to save time and increase productivity.",
-  "Dogtor is a simple mobile application that provides a common platform for dog-owners and veterinary doctor.",
-  "Easy CSP is an application targeted to the cloud workers of Cloudfactory. This application was the winner of the CF Hackathon 2020. This application aims to make the conduction of community service projects easier by letting the cloud workers collaborate.",
-  "A platform to read different books on your smartphone. Save it, Read it, Share it. Built with flutter and uses firebase as backend",
-  "Roshanfolio is a simple portfolio app of mine.",
-];
-
-final kProjectsLinks = [
-  "https://github.com/roshandroids/Digital-Krishi",
-  "https://gitlab.com/roshanode/dogtor",
-  "https://gitlab.com/roshanode/easy_csp",
-  "https://gitlab.com/roshanode/pdf-slot",
-  "https://github.com/roshandroids/roshanfolio",
+final List<Map<String, String>> kProjects = [
+  {
+    'kProjectBanner': "assets/trekking.jpg",
+    'kProjectTitle': "Trek-High Nepal",
+    'kProjectsDescription':
+        "Mobile app promoting e-tourism in Nepal, featuring real-time hiking route updates and emergency alerts.",
+    'kProjectLink': "https://github.com/Prabesh789/Trek-High/tree/main",
+    'kProjectThesisPaper':
+        "https://drive.google.com/file/d/1GoNvlYWyHyffhsZj33vYVf4kvXLIs2z-/view",
+  },
+  {
+    'kProjectBanner': "assets/note_book.png",
+    'kProjectTitle': "Notebook",
+    'kProjectsDescription':
+        "User-friendly app interface for creating, editing, and deleting notes, optimized for performance with a clean and intuitive design.",
+    "kAppStoreLink":
+        "https://play.google.com/store/apps/details?id=com.prabeshrai.note_book",
+  },
+  {
+    'kProjectBanner': "assets/tourism_dashboard.png",
+    'kProjectTitle': "Global Tourism Dashboard",
+    'kProjectsDescription':
+        "An interactive Power BI dashboard analyzing global tourism trends before and after the COVID-19 pandemic.",
+    'kProjectLink': "https://github.com/Prabesh789/Global-Tourism-Dashboard",
+    'kProjectDashboard':
+        "https://app.powerbi.com/view?r=eyJrIjoiZTVjYzRmZDAtNGI4MS00YjU5LTg4YzctYTBkOGY3ZGNiZTM1IiwidCI6ImI2NDE3Y2QwLTFmNzMtNDQ3MS05YTM5LTIwOTUzODIyYTM0YSIsImMiOjN9",
+  },
+  {
+    'kProjectBanner': "assets/air_bnb.png",
+    'kProjectTitle': "Airbnb Trends Analysis",
+    'kProjectsDescription':
+        "An interactive Tableau dashboard analyzing Airbnb data to uncover trends and insights related to listings, pricing, availability, and host behavior.",
+    'kProjectDashboard':
+        "https://public.tableau.com/app/profile/prabesh.rai6215/viz/AirbnbFullProject_17344635039170/Dashboard1",
+  },
 ];
 
 // Contact
@@ -109,7 +71,7 @@ final kContactIcons = [Icons.home, Icons.phone, Icons.mail];
 final kContactTitles = ["Location", "Phone", "Email"];
 
 final kContactDetails = [
-  "Pokhara, Nepal",
-  "(+977) 986-0220305",
-  "shrestharoshan776@gmail.com",
+  "Ottawa, Ontario, Canada",
+  "+1 (343) 543-5098",
+  "raiprabesh775@gmail.com",
 ];
