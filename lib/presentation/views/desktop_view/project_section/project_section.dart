@@ -70,10 +70,9 @@ class _ProjectSectionState extends State<ProjectSection> {
                 icon: Icon(Icons.arrow_back, size: 30),
                 onPressed: scrollLeft,
               ),
-              SizedBox(width: 20),
               // ListView with ScrollController
               SizedBox(
-                height: 600,
+                height: 595,
                 width: width * 0.7,
                 child: ListView.builder(
                   addAutomaticKeepAlives: true,
@@ -86,7 +85,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                     return Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       child: Project(
-                        width: 300,
+                        width: 280,
                         title: projects[i]['kProjectTitle'] ?? "",
                         image: projects[i]['kProjectBanner'] ?? "",
                         description: projects[i]['kProjectsDescription'] ?? "",
@@ -216,7 +215,7 @@ class _ProjectState extends State<Project> {
                         ), // Smooth transition
                         padding: EdgeInsets.symmetric(
                           horizontal: 8,
-                          vertical: 6,
+                          vertical: 4,
                         ),
                         decoration: BoxDecoration(
                           color:
@@ -268,7 +267,7 @@ class _ProjectState extends State<Project> {
                         ), // Smooth transition
                         padding: EdgeInsets.symmetric(
                           horizontal: 8,
-                          vertical: 6,
+                          vertical: 4,
                         ),
                         decoration: BoxDecoration(
                           color:
@@ -321,7 +320,7 @@ class _ProjectState extends State<Project> {
                         ), // Smooth transition
                         padding: EdgeInsets.symmetric(
                           horizontal: 8,
-                          vertical: 6,
+                          vertical: 4,
                         ),
                         decoration: BoxDecoration(
                           color:
@@ -373,7 +372,7 @@ class _ProjectState extends State<Project> {
                         ), // Smooth transition
                         padding: EdgeInsets.symmetric(
                           horizontal: 8,
-                          vertical: 6,
+                          vertical: 4,
                         ),
                         decoration: BoxDecoration(
                           color:

@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_web/presentation/animation/entrance_fader.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/about/about_section.dart';
-import 'package:portfolio_web/presentation/views/desktop_view/blog_section/blog_section.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/contact_section/contact_section.dart';
-import 'package:portfolio_web/presentation/views/desktop_view/footer_section/footer_section.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/home_section/home_section.dart';
-import 'package:portfolio_web/presentation/views/desktop_view/main_section/widget/arrow_on_top.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/nav_bar/nav_bar.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/project_section/project_section.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -35,9 +32,13 @@ class _HomeSectionState extends State<MainSection> {
     // "BLOG",
     "CONTACT",
   ];
+  var _selectedIndex = 0;
 
   void _scroll(int i) {
     itemScrollController.scrollTo(index: i, duration: Duration(seconds: 1));
+    setState(() {
+      _selectedIndex = i; // Update selected index
+    });
   }
 
   final List<IconData> _sectionsIcons = [
@@ -76,6 +77,7 @@ class _HomeSectionState extends State<MainSection> {
           for (int i = 0; i < _sectionsName.length; i++)
             _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
         ],
+        actionsPadding: EdgeInsets.only(right: 60),
       ),
       drawer: MediaQuery.of(context).size.width < 760 ? _appBarMobile() : null,
       body: Container(
@@ -127,7 +129,17 @@ class _HomeSectionState extends State<MainSection> {
               onPressed: () => _scroll(index),
               child: Text(
                 childText,
-                style: TextStyle(fontSize: 15, color: kBlack),
+                style: TextStyle(
+                  fontSize: 15,
+                  color: kBlack,
+                  decoration:
+                      _selectedIndex == index
+                          ? TextDecoration.underline
+                          : TextDecoration.none,
+                  decorationThickness: 0.7,
+                  decorationColor: kBlack,
+                  decorationStyle: TextDecorationStyle.solid,
+                ),
               ),
             ),
           ),

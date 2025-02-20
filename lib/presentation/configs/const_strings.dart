@@ -59,7 +59,7 @@ final List<Map<String, String>> kProjects = [
     'kProjectBanner': "assets/air_bnb.png",
     'kProjectTitle': "Airbnb Trends Analysis",
     'kProjectsDescription':
-        "An interactive Tableau dashboard analyzing Airbnb data to uncover trends and insights related to listings, pricing, availability, and host behavior.",
+        "Tableau dashboard analyzing Airbnb data to uncover trends and insights related to listings, pricing, availability, and host behavior.",
     'kProjectDashboard':
         "https://public.tableau.com/app/profile/prabesh.rai6215/viz/AirbnbFullProject_17344635039170/Dashboard1",
   },

@@ -50,16 +50,72 @@ class _ContactSectionState extends State<ContactSection> {
       );
       if (!mounted) return;
       if (response.statusCode == 200) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text("Message Sent Successfully!")));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            behavior:
+                SnackBarBehavior
+                    .floating, // Ensures it's floating and not full-width
+            backgroundColor:
+                Colors
+                    .transparent, // Makes background transparent so we can control size
+            elevation: 0, // Removes shadow for a cleaner look
+            content: Center(
+              // Centers the snackbar on the screen
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                width: 300, // Fixed width
+                decoration: BoxDecoration(
+                  color: Colors.green, // Background color
+                  borderRadius: BorderRadius.circular(10), // Rounded corners
+                ),
+                child: Text(
+                  "Message Sent Successfully!",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  textAlign: TextAlign.center, // Centers text inside snackbar
+                ),
+              ),
+            ),
+            duration: Duration(seconds: 3), // Duration before it disappears
+          ),
+        );
         _nameController.clear();
         _emailController.clear();
         _messageController.clear();
       } else {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text("Failed to Send Message")));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            behavior:
+                SnackBarBehavior
+                    .floating, // Ensures it's floating and not full-width
+            backgroundColor:
+                Colors
+                    .transparent, // Makes background transparent so we can control size
+            elevation: 0, // Removes shadow for a cleaner look
+            content: Center(
+              // Centers the snackbar on the screen
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                width: 300, // Fixed width
+                decoration: BoxDecoration(
+                  color: kRed, // Background color
+                  borderRadius: BorderRadius.circular(10), // Rounded corners
+                ),
+                child: Text(
+                  "Something went Wrong!",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  textAlign: TextAlign.center, // Centers text inside snackbar
+                ),
+              ),
+            ),
+            duration: Duration(seconds: 3), // Duration before it disappears
+          ),
+        );
       }
     }
   }
@@ -163,6 +219,7 @@ class _ContactSectionState extends State<ContactSection> {
               }
               return null;
             },
+            onEditingComplete: () => _emailFocus.requestFocus(),
           ),
         ),
         SizedBox(height: 10),
@@ -223,6 +280,7 @@ class _ContactSectionState extends State<ContactSection> {
               }
               return null;
             },
+            onEditingComplete: () => _messageFocus.requestFocus(),
           ),
         ),
         SizedBox(height: 10),
@@ -283,6 +341,7 @@ class _ContactSectionState extends State<ContactSection> {
               }
               return null;
             },
+            onEditingComplete: () => _messageFocus.unfocus(),
           ),
         ),
         SizedBox(height: 20),
@@ -296,7 +355,7 @@ class _ContactSectionState extends State<ContactSection> {
             ),
             child: Text(
               "SEND MESSAGE",
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: TextStyle(color: Colors.white, fontSize: 16),
             ),
           ),
         ),
@@ -323,8 +382,8 @@ class ConnectWithMe extends StatelessWidget {
         ),
         SizedBox(height: 10),
         Text(
-          "This form is only for contacting me about opportunities to work or collaborate together.\nPlease do not use this as a form for requesting help.",
-          style: TextStyle(fontSize: 12, color: Colors.grey[700]),
+          "This form is only for contacting me about opportunities to work or collaborate together.\nPlease avoid it for general conversations.",
+          style: TextStyle(fontSize: 13, color: Colors.grey[700]),
         ),
         // Social Media Icons
         SizedBox(
