@@ -32,7 +32,7 @@ class _HomeSectionState extends State<MainSection> {
     "HOME",
     "ABOUT",
     "PROJECTS",
-    "BLOG",
+    // "BLOG",
     "CONTACT",
   ];
 
@@ -51,20 +51,14 @@ class _HomeSectionState extends State<MainSection> {
   Widget sectionWidget(int i) {
     if (i == 0) {
       return HomeSection();
+      // return ContactSection();
     } else if (i == 1) {
       return AboutSection();
     } else if (i == 2) {
       return ProjectSection();
     } else if (i == 3) {
-      return BlogSection();
-    } else if (i == 4) {
+      // return BlogSection();
       return ContactSection();
-    } else if (i == 5) {
-      return SizedBox(height: 40.0);
-    } else if (i == 6) {
-      return ArrowOnTop(onPressed: () => _scroll(0));
-    } else if (i == 7) {
-      return FooterSection();
     } else {
       return Container();
     }

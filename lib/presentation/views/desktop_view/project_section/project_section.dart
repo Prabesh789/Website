@@ -159,7 +159,7 @@ class _ProjectState extends State<Project> {
                 BoxShadow(
                   // ignore: deprecated_member_use
                   color: Colors.grey.withOpacity(
-                    0.5,
+                    0.2,
                   ), // Shadow color with opacity
                   spreadRadius: 2, // How much the shadow spreads
                   blurRadius: 10, // Softness of the shadow
