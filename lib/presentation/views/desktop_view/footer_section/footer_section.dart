@@ -1,6 +1,6 @@
 // presentation/views/desktop_view/footer_section/footer_section.dart
 import 'package:flutter/material.dart';
-import 'package:portfolio_web/presentation/configs/const_colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
 import 'package:portfolio_web/presentation/utils/social_medial_icon.dart';
 
@@ -9,54 +9,65 @@ class FooterSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
     return Container(
-      margin: EdgeInsets.fromLTRB(0, height * 0.05, 0, 0),
-      height: height * 0.25,
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       width: width,
-      color: Colors.grey[900],
-      child: Container(
-        padding: EdgeInsets.all(20),
-        color: Colors.black,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: height * 0.050,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  for (int i = 0; i < kSocialIcons.length; i++)
-                    SocialMediaIconBtn(
+      color: Colors.black,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // 🔹 Social Media Icons
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              for (int i = 0; i < kSocialIcons.length; i++)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: SocialMediaIconBtn(
                       icon: kSocialIcons[i],
                       socialLink: kSocialLinks[i],
-                      height: 20,
+                      height: 22,
                     ),
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
-            // Contact Info
-            Text(
-              "📧 Email: raiprabesh775@gmail.com",
-              style: TextStyle(fontSize: 12, color: kWhite),
-            ),
-            Text(
-              "📍 Location: Ottawa, Canada",
-              style: TextStyle(fontSize: 12, color: kWhite),
-            ),
-            SizedBox(height: 10),
+                  ),
+                ),
+            ],
+          ),
 
-            // Copyright
-            Text(
-              "© ${DateTime.now().year} Prabesh Rai. All Rights Reserved.",
-              style: TextStyle(fontSize: 12, color: Colors.grey),
-            ),
-          ],
-        ),
+          SizedBox(height: 15),
+
+          // 🔹 Divider for better separation
+          Divider(
+            color: Colors.grey[800],
+            thickness: 1,
+            indent: width * 0.25,
+            endIndent: width * 0.25,
+          ),
+
+          SizedBox(height: 15),
+
+          // 🔹 Contact Information
+          Text(
+            "📧 Email: raiprabesh775@gmail.com",
+            style: GoogleFonts.inter(fontSize: 14, color: Colors.white70),
+          ),
+          Text(
+            "📍 Location: Ottawa, Canada",
+            style: GoogleFonts.inter(fontSize: 14, color: Colors.white70),
+          ),
+
+          SizedBox(height: 10),
+
+          // 🔹 Copyright Information
+          Text(
+            "© ${DateTime.now().year} Prabesh Rai. All Rights Reserved.",
+            style: GoogleFonts.roboto(fontSize: 12, color: Colors.grey[500]),
+          ),
+        ],
       ),
     );
   }
