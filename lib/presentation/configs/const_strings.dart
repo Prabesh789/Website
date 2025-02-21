@@ -20,17 +20,10 @@ void launchURL(String url) async =>
         : throw 'Could not launch $url';
 
 // projects
-final kProjectsBanner = [
-  "assets/trek.png",
-  "assets/projects/dogtor.png",
-  "assets/projects/easy_csp.png",
-  "assets/projects/pdf_slot.png",
-  "assets/projects/roshanfolio.png",
-];
 
 final List<Map<String, String>> kProjects = [
   {
-    'kProjectBanner': "assets/trekking.jpg",
+    'kProjectBanner': "assets/trek.png",
     'kProjectTitle': "Trek-High Nepal",
     'kProjectsDescription':
         "Mobile app promoting e-tourism in Nepal, featuring real-time hiking route updates and emergency alerts.",

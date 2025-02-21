@@ -18996,7 +18996,7 @@ q=p
 return A.auG(a,b,d,null,r,q,g,h)},
 da(a,b,c,d,e){return new A.NE(B.aT,c,d,b,null,B.f1,null,e,a,null)},
 dz(a,b,c,d){return new A.Jj(B.aC,c,d,b,null,B.f1,null,0,a,null)},
-aBk(a,b,c){return new A.PM(a,c,b,null)},
+aBk(a,b,c,d){return new A.PM(a,d,c,b,null)},
 auN(a,b,c,d,e,f,g,h,i,j,k,l,m,n){return new A.NA(i,j,k,g,d,A.aA8(m,1),c,b,h,n,l,f,e,A.aBh(i,A.aA8(m,1)),a)},
 aA8(a,b){var s,r,q,p
 $label0$0:{s=null
@@ -19220,11 +19220,12 @@ _.f=a
 _.r=b
 _.b=c
 _.a=d},
-PM:function PM(a,b,c,d){var _=this
+PM:function PM(a,b,c,d,e){var _=this
 _.f=a
-_.y=b
-_.c=c
-_.a=d},
+_.x=b
+_.y=c
+_.c=d
+_.a=e},
 NA:function NA(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o){var _=this
 _.e=a
 _.f=b
@@ -50720,7 +50721,7 @@ if(!h)B.b.I(g,l)
 if(h)g.push(A.a5(a0,a0,j*0.4))
 a1=A.b([A.da(g,B.A,B.aa,B.I,0)],a1)
 if(h)a1.push(new A.bA(B.Hd,A.da(l,B.A,B.tY,B.I,0),a0))
-f=new A.bA(o,A.aBk(B.dQ,a1,B.zI),a0)
+f=new A.bA(o,A.aBk(B.dQ,a1,B.zI,0),a0)
 if(!q)f=A.ad1(!0,f,B.b9,!1)
 a1=a.a
 e=a1.e
@@ -65487,7 +65488,7 @@ if(q!=null)q.Y()}}}
 A.Kr.prototype={}
 A.PM.prototype={
 aF(a){var s=A.d8(a)
-s=new A.Bl(B.aT,this.f,0,B.dQ,0,this.y,s,B.f1,B.w,A.ab(t.O5),0,null,null,new A.aI(),A.ab(t.T))
+s=new A.Bl(B.aT,this.f,0,B.dQ,this.x,this.y,s,B.f1,B.w,A.ab(t.O5),0,null,null,new A.aI(),A.ab(t.T))
 s.aE()
 s.I(0,null)
 return s},
@@ -65496,7 +65497,7 @@ b.snD(B.aT)
 b.sfX(this.f)
 b.sBh(0)
 b.sapT(B.dQ)
-b.sapV(0)
+b.sapV(this.x)
 b.saj0(this.y)
 s=A.d8(a)
 if(b.a5!=s){b.a5=s
@@ -83097,7 +83098,7 @@ else if(a===3)return new A.A0(s)
 else return A.ek(s,s,B.w,s,s,s,s,s,s,s,s,s,s)},
 O(a){var s,r,q,p,o=this,n=null,m=A.b([],t.p)
 for(s=o.f,r=o.w,q=0;q<4;++q)m.push(o.a37(s[q],q,r[q]))
-m=A.awY(n,n,n,0,A.aBk(B.zH,m,B.zJ),60)
+m=A.awY(n,n,B.l,0,A.aBk(B.zH,m,B.zJ,5),60)
 s=t.w
 r=A.ar(a,n,s).w
 s=A.ar(a,n,s).w
@@ -93217,7 +93218,7 @@ $.rR=A.b([95.047,100,108.883],t.n)
 $.aCv=null
 $.arw=null
 $.hB=function(){var s="kProjectsDescription",r="kProjectDashboard",q=t.N
-return A.b([A.as(["kProjectBanner","assets/trekking.jpg","kProjectTitle","Trek-High Nepal",s,"Mobile app promoting e-tourism in Nepal, featuring real-time hiking route updates and emergency alerts.","kProjectLink","https://github.com/Prabesh789/Trek-High/tree/main","kProjectThesisPaper","https://drive.google.com/file/d/1GoNvlYWyHyffhsZj33vYVf4kvXLIs2z-/view"],q,q),A.as(["kProjectBanner","assets/note_book.png","kProjectTitle","Notebook",s,"User-friendly app interface for creating, editing, and deleting notes, optimized for performance with a clean and intuitive design.","kAppStoreLink","https://play.google.com/store/apps/details?id=com.prabeshrai.note_book"],q,q),A.as(["kProjectBanner","assets/tourism_dashboard.png","kProjectTitle","Global Tourism Dashboard",s,"An interactive Power BI dashboard analyzing global tourism trends before and after the COVID-19 pandemic.","kProjectLink","https://github.com/Prabesh789/Global-Tourism-Dashboard",r,"https://app.powerbi.com/view?r=eyJrIjoiZTVjYzRmZDAtNGI4MS00YjU5LTg4YzctYTBkOGY3ZGNiZTM1IiwidCI6ImI2NDE3Y2QwLTFmNzMtNDQ3MS05YTM5LTIwOTUzODIyYTM0YSIsImMiOjN9"],q,q),A.as(["kProjectBanner","assets/air_bnb.png","kProjectTitle","Airbnb Trends Analysis",s,"Tableau dashboard analyzing Airbnb data to uncover trends and insights related to listings, pricing, availability, and host behavior.",r,"https://public.tableau.com/app/profile/prabesh.rai6215/viz/AirbnbFullProject_17344635039170/Dashboard1"],q,q)],A.a3("t<b4<i,i>>"))}()
+return A.b([A.as(["kProjectBanner","assets/trek.png","kProjectTitle","Trek-High Nepal",s,"Mobile app promoting e-tourism in Nepal, featuring real-time hiking route updates and emergency alerts.","kProjectLink","https://github.com/Prabesh789/Trek-High/tree/main","kProjectThesisPaper","https://drive.google.com/file/d/1GoNvlYWyHyffhsZj33vYVf4kvXLIs2z-/view"],q,q),A.as(["kProjectBanner","assets/note_book.png","kProjectTitle","Notebook",s,"User-friendly app interface for creating, editing, and deleting notes, optimized for performance with a clean and intuitive design.","kAppStoreLink","https://play.google.com/store/apps/details?id=com.prabeshrai.note_book"],q,q),A.as(["kProjectBanner","assets/tourism_dashboard.png","kProjectTitle","Global Tourism Dashboard",s,"An interactive Power BI dashboard analyzing global tourism trends before and after the COVID-19 pandemic.","kProjectLink","https://github.com/Prabesh789/Global-Tourism-Dashboard",r,"https://app.powerbi.com/view?r=eyJrIjoiZTVjYzRmZDAtNGI4MS00YjU5LTg4YzctYTBkOGY3ZGNiZTM1IiwidCI6ImI2NDE3Y2QwLTFmNzMtNDQ3MS05YTM5LTIwOTUzODIyYTM0YSIsImMiOjN9"],q,q),A.as(["kProjectBanner","assets/air_bnb.png","kProjectTitle","Airbnb Trends Analysis",s,"Tableau dashboard analyzing Airbnb data to uncover trends and insights related to listings, pricing, availability, and host behavior.",r,"https://public.tableau.com/app/profile/prabesh.rai6215/viz/AirbnbFullProject_17344635039170/Dashboard1"],q,q)],A.a3("t<b4<i,i>>"))}()
 $.q8=null
 $.aKl=A.r(t.S,A.a3("aUR"))
 $.aR1=A.r(A.a3("rz"),A.a3("Jk<~>"))

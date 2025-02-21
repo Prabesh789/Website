@@ -73,11 +73,13 @@ class _HomeSectionState extends State<MobileViewMainSection> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        backgroundColor: kWhite,
         toolbarHeight: 60,
         elevation: 0.0,
         title: Wrap(
           alignment: WrapAlignment.center,
           crossAxisAlignment: WrapCrossAlignment.center,
+          runSpacing: 5,
           children: [
             for (int i = 0; i < _sectionsName.length; i++)
               _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
