@@ -116,7 +116,7 @@ class _HomeSectionState extends State<MobileViewMainSection> {
       delay: Duration(seconds: 0),
       duration: Duration(milliseconds: 500),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
+        padding: const EdgeInsets.fromLTRB(0, 1, 6, 6),
         child: MaterialButton(
           onPressed: () => _scroll(index),
           child: Text(

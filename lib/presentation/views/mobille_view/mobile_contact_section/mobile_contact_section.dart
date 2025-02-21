@@ -133,36 +133,20 @@ class _MobileContactSectionState extends State<MobileContactSection> {
           child: SizedBox(
             height: height,
             width: width,
-            child: Row(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              spacing: width * 0.07,
               children: [
-                MediaQuery.of(context).size.width < 1000
-                    ? SizedBox.shrink()
-                    : ConnectWithMe(height: height, width: width),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    MediaQuery.of(context).size.width < 1000
-                        ? ConnectWithMe(height: height, width: width)
-                        : SizedBox.shrink(),
-                    MediaQuery.of(context).size.width < 760
-                        ? Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SizedBox(
-                            width: width * 0.5,
-                            child: Divider(color: kGrey),
-                          ),
-                        )
-                        : SizedBox.shrink(),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.width > 760 ? 0 : 20,
-                    ),
-                    formField(width),
-                  ],
+                ConnectWithMe(height: height, width: width),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 40,
+                    vertical: 5,
+                  ),
+                  child: Divider(color: kGrey),
                 ),
+                SizedBox(height: 20),
+                formField(width),
               ],
             ),
           ),
@@ -183,7 +167,7 @@ class _MobileContactSectionState extends State<MobileContactSection> {
         ),
         SizedBox(height: 10),
         SizedBox(
-          width: width * 0.7,
+          width: width * 0.9,
           child: TextFormField(
             cursorColor: kGrey,
             controller: _nameController,
@@ -240,7 +224,7 @@ class _MobileContactSectionState extends State<MobileContactSection> {
         Text("Email", style: TextStyle(fontSize: 14, color: Colors.grey[700])),
         SizedBox(height: 10),
         SizedBox(
-          width: width * 0.7,
+          width: width * 0.9,
           child: TextFormField(
             cursorColor: kGrey,
             controller: _emailController,
@@ -304,7 +288,7 @@ class _MobileContactSectionState extends State<MobileContactSection> {
         ),
         SizedBox(height: 10),
         SizedBox(
-          width: width * 0.7,
+          width: width * 0.9,
           child: TextFormField(
             maxLines: width < 760 ? 3 : 5,
             cursorColor: kGrey,

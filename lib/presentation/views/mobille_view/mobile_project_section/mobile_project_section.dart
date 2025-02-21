@@ -74,7 +74,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
               // ListView with ScrollController
               SizedBox(
                 height: 590,
-                width: width * 0.8,
+                width: width * 0.74,
                 child: ListView.builder(
                   addAutomaticKeepAlives: true,
                   shrinkWrap: true,

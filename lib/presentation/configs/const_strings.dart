@@ -35,7 +35,7 @@ final List<Map<String, String>> kProjects = [
     'kProjectBanner': "assets/note_book.png",
     'kProjectTitle': "Notebook",
     'kProjectsDescription':
-        "User-friendly app interface for creating, editing, and deleting notes, optimized for performance with a clean and intuitive design.",
+        "Intuitive and optimized note-taking app with a user-friendly interface for creating, editing, and deleting notes.",
     "kAppStoreLink":
         "https://play.google.com/store/apps/details?id=com.prabeshrai.note_book",
   },
@@ -52,7 +52,7 @@ final List<Map<String, String>> kProjects = [
     'kProjectBanner': "assets/air_bnb.png",
     'kProjectTitle': "Airbnb Trends Analysis",
     'kProjectsDescription':
-        "Tableau dashboard analyzing Airbnb data to uncover trends and insights related to listings, pricing, availability, and host behavior.",
+        "Tableau dashboard analyzing Airbnb data for trends in listings, pricing, availability, and host behavior.",
     'kProjectDashboard':
         "https://public.tableau.com/app/profile/prabesh.rai6215/viz/AirbnbFullProject_17344635039170/Dashboard1",
   },
