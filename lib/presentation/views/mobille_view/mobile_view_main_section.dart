@@ -75,12 +75,15 @@ class _HomeSectionState extends State<MobileViewMainSection> {
 
       appBar: AppBar(
         leadingWidth: 0,
+        centerTitle: true,
+        titleSpacing: 0,
         backgroundColor: kWhite,
         toolbarHeight: 55,
         elevation: 0.0,
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             for (int i = 0; i < _sectionsName.length; i++)
               _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),

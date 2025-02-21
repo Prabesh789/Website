@@ -41,12 +41,12 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(height: 20),
+          SizedBox(height: 40),
           SizedBox(
             width: width * 0.5,
             child: Text(
               "Portfolio",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
           ),
