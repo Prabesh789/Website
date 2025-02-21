@@ -76,10 +76,9 @@ class _HomeSectionState extends State<MobileViewMainSection> {
         backgroundColor: kWhite,
         toolbarHeight: 60,
         elevation: 0.0,
-        title: Wrap(
-          alignment: WrapAlignment.center,
-          crossAxisAlignment: WrapCrossAlignment.center,
-          runSpacing: 5,
+        title: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             for (int i = 0; i < _sectionsName.length; i++)
               _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
@@ -113,13 +112,13 @@ class _HomeSectionState extends State<MobileViewMainSection> {
       delay: Duration(seconds: 0),
       duration: Duration(milliseconds: 500),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(6.0),
         child: MaterialButton(
           onPressed: () => _scroll(index),
           child: Text(
             childText,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 12,
               color: kBlack,
               decoration:
                   _selectedIndex == index

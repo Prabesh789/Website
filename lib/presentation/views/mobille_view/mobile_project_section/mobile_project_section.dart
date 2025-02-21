@@ -68,7 +68,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
             children: [
               // Left Arrow Button
               IconButton(
-                icon: Icon(Icons.arrow_back, size: 20),
+                icon: Icon(Icons.arrow_back_ios, size: 20),
                 onPressed: scrollLeft,
               ),
               // ListView with ScrollController
@@ -77,6 +77,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
                 width: width * 0.8,
                 child: ListView.builder(
                   addAutomaticKeepAlives: true,
+                  shrinkWrap: true,
                   physics: BouncingScrollPhysics(),
                   controller: scrollController,
                   scrollDirection: Axis.horizontal,
@@ -86,7 +87,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
                     return Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       child: Project(
-                        width: 280,
+                        width: width * 0.7,
                         title: projects[i]['kProjectTitle'] ?? "",
                         image: projects[i]['kProjectBanner'] ?? "",
                         description: projects[i]['kProjectsDescription'] ?? "",
@@ -102,7 +103,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
               SizedBox(width: 20),
               // Right Arrow Button
               IconButton(
-                icon: Icon(Icons.arrow_forward, size: 20),
+                icon: Icon(Icons.arrow_forward_ios, size: 20),
                 onPressed: scrollRight,
               ),
             ],

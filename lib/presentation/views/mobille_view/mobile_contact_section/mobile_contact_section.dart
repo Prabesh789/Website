@@ -125,6 +125,8 @@ class _MobileContactSectionState extends State<MobileContactSection> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Form(
           key: _formKey,
