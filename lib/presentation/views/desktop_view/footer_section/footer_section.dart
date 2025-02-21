@@ -1,10 +1,8 @@
 // presentation/views/desktop_view/footer_section/footer_section.dart
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
 import 'package:portfolio_web/presentation/utils/social_medial_icon.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class FooterSection extends StatelessWidget {
   const FooterSection({super.key});
