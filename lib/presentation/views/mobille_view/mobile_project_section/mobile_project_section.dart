@@ -55,7 +55,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
             child: SizedBox(
               width: width * 0.8,
               child: Text(
-                "My portfolio includes Mobile App Development and Research Projects, Data Analysis Projects.",
+                "My portfolio includes mobile app development, research projects, and data analysis projects.",
                 style: TextStyle(fontSize: 13),
                 textAlign: TextAlign.center,
               ),
