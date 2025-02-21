@@ -103,7 +103,6 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
                   },
                 ),
               ),
-              SizedBox(width: 20),
               // Right Arrow Button
               IconButton(
                 icon: Icon(Icons.arrow_forward_ios, size: 20),
