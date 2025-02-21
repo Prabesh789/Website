@@ -121,8 +121,8 @@ class _MainSectionState extends State<MainSection> {
     return MediaQuery.of(context).size.width > 480
         ? EntranceFader(
           offset: Offset(0, -20),
-          delay: Duration(seconds: 1),
-          duration: Duration(seconds: 1),
+          delay: Duration(seconds: 0),
+          duration: Duration(milliseconds: 500),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: MaterialButton(
