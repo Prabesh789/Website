@@ -55,7 +55,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
             child: SizedBox(
               width: width * 0.8,
               child: Text(
-                "My portfolio includes Mobile App Development and Research Projects, Data Analysis Projects that I've contributed to or created personally.",
+                "My portfolio includes Mobile App Development and Research Projects, Data Analysis Projects.",
                 style: TextStyle(fontSize: 13),
                 textAlign: TextAlign.center,
               ),
@@ -74,7 +74,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
               // ListView with ScrollController
               SizedBox(
                 height: 590,
-                width: width * 0.7,
+                width: width * 0.8,
                 child: ListView.builder(
                   addAutomaticKeepAlives: true,
                   shrinkWrap: true,

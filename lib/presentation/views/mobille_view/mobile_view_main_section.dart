@@ -76,7 +76,6 @@ class _HomeSectionState extends State<MobileViewMainSection> {
       appBar: AppBar(
         leadingWidth: 0,
         centerTitle: true,
-        titleSpacing: 0,
         backgroundColor: kWhite,
         toolbarHeight: 55,
         elevation: 0.0,
@@ -97,11 +96,11 @@ class _HomeSectionState extends State<MobileViewMainSection> {
         child: RawScrollbar(
           controller: _scrollController,
           thumbColor: kTeal200,
-          thickness: 4.0,
+          thickness: 3.0,
           child: ScrollablePositionedList.builder(
             itemScrollController: itemForMobileScrollController,
             itemPositionsListener: _itemPositionListener,
-            itemCount: 6,
+            itemCount: 4,
             itemBuilder: (context, index) {
               return sectionWidget(index);
             },
@@ -117,7 +116,7 @@ class _HomeSectionState extends State<MobileViewMainSection> {
       delay: Duration(seconds: 0),
       duration: Duration(milliseconds: 500),
       child: Padding(
-        padding: const EdgeInsets.all(6.0),
+        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
         child: MaterialButton(
           onPressed: () => _scroll(index),
           child: Text(
