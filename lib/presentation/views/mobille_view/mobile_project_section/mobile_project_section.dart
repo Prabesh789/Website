@@ -41,7 +41,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(height: 100),
+          SizedBox(height: 20),
           SizedBox(
             width: width * 0.5,
             child: Text(
@@ -74,7 +74,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
               // ListView with ScrollController
               SizedBox(
                 height: 590,
-                width: width * 0.8,
+                width: width * 0.7,
                 child: ListView.builder(
                   addAutomaticKeepAlives: true,
                   shrinkWrap: true,
@@ -85,7 +85,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
                   itemBuilder: (context, i) {
                     final projects = kProjects;
                     return Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20),
+                      padding: const EdgeInsets.only(right: 20),
                       child: Project(
                         width: width * 0.7,
                         title: projects[i]['kProjectTitle'] ?? "",

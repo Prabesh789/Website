@@ -72,9 +72,11 @@ class _HomeSectionState extends State<MobileViewMainSection> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
+
       appBar: AppBar(
+        leadingWidth: 0,
         backgroundColor: kWhite,
-        toolbarHeight: 60,
+        toolbarHeight: 55,
         elevation: 0.0,
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
