@@ -21,7 +21,7 @@ void launchURL(String url) async =>
 
 // projects
 final kProjectsBanner = [
-  "assets/trekking.jpg",
+  "assets/trek.png",
   "assets/projects/dogtor.png",
   "assets/projects/easy_csp.png",
   "assets/projects/pdf_slot.png",

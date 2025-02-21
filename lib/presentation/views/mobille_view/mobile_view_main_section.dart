@@ -73,8 +73,7 @@ class _HomeSectionState extends State<MobileViewMainSection> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: kGreen,
-        toolbarHeight: MediaQuery.of(context).size.height * 0.06,
+        toolbarHeight: 60,
         elevation: 0.0,
         title: Wrap(
           alignment: WrapAlignment.center,
