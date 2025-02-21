@@ -146,6 +146,18 @@ class _ContactSectionState extends State<ContactSection> {
                     MediaQuery.of(context).size.width < 1000
                         ? ConnectWithMe(height: height)
                         : SizedBox.shrink(),
+                    MediaQuery.of(context).size.width < 760
+                        ? Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            width: width * 0.5,
+                            child: Divider(color: kGrey),
+                          ),
+                        )
+                        : SizedBox.shrink(),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.width > 760 ? 0 : 20,
+                    ),
                     formField(width),
                   ],
                 ),
@@ -372,7 +384,10 @@ class ConnectWithMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment:
+          MediaQuery.of(context).size.width > 760
+              ? CrossAxisAlignment.start
+              : CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(

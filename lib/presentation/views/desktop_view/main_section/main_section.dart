@@ -77,9 +77,9 @@ class _HomeSectionState extends State<MainSection> {
           for (int i = 0; i < _sectionsName.length; i++)
             _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
         ],
-        actionsPadding: EdgeInsets.only(right: 60),
+        actionsPadding: EdgeInsets.only(right: 60, bottom: 15),
       ),
-      drawer: MediaQuery.of(context).size.width < 760 ? _appBarMobile() : null,
+      drawer: MediaQuery.of(context).size.width < 480 ? _appBarMobile() : null,
       body: Container(
         color: kWhite,
         height: MediaQuery.of(context).size.height,
@@ -118,7 +118,7 @@ class _HomeSectionState extends State<MainSection> {
   }
 
   Widget _appBarActions(String childText, int index, IconData icon) {
-    return MediaQuery.of(context).size.width > 760
+    return MediaQuery.of(context).size.width > 480
         ? EntranceFader(
           offset: Offset(0, -20),
           delay: Duration(seconds: 3),
@@ -130,7 +130,7 @@ class _HomeSectionState extends State<MainSection> {
               child: Text(
                 childText,
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 14,
                   color: kBlack,
                   decoration:
                       _selectedIndex == index

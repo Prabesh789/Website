@@ -55,7 +55,9 @@ class _ProjectSectionState extends State<ProjectSection> {
               width: width * 0.5,
               child: Text(
                 "My portfolio includes Mobile App Development and Research Projects, Data Analysis Projects that I've contributed to or created personally.",
-                style: TextStyle(fontSize: 15),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width > 760 ? 15 : 13,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),

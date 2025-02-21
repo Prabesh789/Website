@@ -25,7 +25,10 @@ class _AboutSectionState extends State<AboutSection> {
             width: width * 0.5,
             child: Text(
               "Hello, world!",
-              style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: MediaQuery.of(context).size.width > 760 ? 70 : 50,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Padding(
@@ -34,7 +37,9 @@ class _AboutSectionState extends State<AboutSection> {
               width: width * 0.5,
               child: Text(
                 "I am Prabesh Rai. I am currently pursuing my Post-graduate degree in Business Analytics at Lambton College Ottawa. I am passionate about Data Analystics and Machine Learning.",
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,
+                ),
               ),
             ),
           ),
@@ -44,7 +49,9 @@ class _AboutSectionState extends State<AboutSection> {
               width: width * 0.5,
               child: Text(
                 "I am graduate in Computer Science and Engineering from University of Bedfordshire, In 2022. I have expereinced in developing mobile applications using Flutter and Dart.",
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,
+                ),
               ),
             ),
           ),
@@ -58,7 +65,10 @@ class _AboutSectionState extends State<AboutSection> {
               width: width * 0.5,
               child: Text(
                 "Lately",
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width > 760 ? 50 : 30,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -68,7 +78,9 @@ class _AboutSectionState extends State<AboutSection> {
               width: width * 0.5,
               child: Text(
                 "My current goal is to strengthen my foundation in Machine Learning, Deep Learning, Data Structures & Algorithms, Computer Architecture, Data Analytics, and Business Analytics while continuing Mobile App Development. I aim to integrate these technologies to create innovative solutions.",
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,
+                ),
               ),
             ),
           ),

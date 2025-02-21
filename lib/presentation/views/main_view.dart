@@ -19,15 +19,12 @@ class _MyWidgetState extends State<MainView> {
         if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
           return DesktopView();
         }
-
         if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
           return DesktopView();
         }
-
         if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
           return Container(color: Colors.yellow);
         }
-
         return Container(color: Colors.purple);
       },
     );
