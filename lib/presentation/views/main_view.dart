@@ -1,6 +1,7 @@
 // presentation/views/main_view.dart
 import 'package:flutter/material.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/desktop_view.dart';
+import 'package:portfolio_web/presentation/views/mobille_view/mobile_view_main_section.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class MainView extends StatefulWidget {
@@ -23,7 +24,7 @@ class _MyWidgetState extends State<MainView> {
           return DesktopView();
         }
         if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
-          return Container(color: Colors.yellow);
+          return MobileViewMainSection();
         }
         return Container(color: Colors.purple);
       },

@@ -15,10 +15,10 @@ class MainSection extends StatefulWidget {
   const MainSection({super.key});
 
   @override
-  State<MainSection> createState() => _HomeSectionState();
+  State<MainSection> createState() => _MainSectionState();
 }
 
-class _HomeSectionState extends State<MainSection> {
+class _MainSectionState extends State<MainSection> {
   final ScrollController _scrollController = ScrollController(
     initialScrollOffset: 25.0,
   );
@@ -79,7 +79,7 @@ class _HomeSectionState extends State<MainSection> {
         ],
         actionsPadding: EdgeInsets.only(right: 60, bottom: 15),
       ),
-      drawer: MediaQuery.of(context).size.width < 480 ? _appBarMobile() : null,
+      drawer: MediaQuery.of(context).size.width < 400 ? _appBarMobile() : null,
       body: Container(
         color: kWhite,
         height: MediaQuery.of(context).size.height,
