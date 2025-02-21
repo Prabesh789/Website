@@ -25,6 +25,7 @@ class _MobileHomeSectionState extends State<MobileHomeSection> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Overview(
+            width: width,
             height: height,
             crossAxisAlignment: CrossAxisAlignment.center,
           ),
@@ -54,9 +55,11 @@ class Overview extends StatelessWidget {
     super.key,
     required this.height,
     required this.crossAxisAlignment,
+    required this.width,
   });
 
   final double height;
+  final double width;
   final CrossAxisAlignment crossAxisAlignment;
 
   @override
@@ -90,12 +93,13 @@ class Overview extends StatelessWidget {
           ),
         ),
         SizedBox(height: 14),
-        Text(
-          "I am a Computer Science Graduate pursuing \nPost-Graduate In Business Analytics at Lambton College.",
-          style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
-          textAlign: TextAlign.start, // Aligns the text properly
-          softWrap: true, // Ensures text wraps properly
-          overflow: TextOverflow.visible, // Avoids text being clipped
+        SizedBox(
+          width: width * 0.8,
+          child: Text(
+            "I am a Computer Science Graduate pursuing Post-Graduate Degree In Business Analytics at Lambton College.",
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+            textAlign: TextAlign.center, // Aligns the text properly
+          ),
         ),
         SizedBox(height: 16),
         InkWell(

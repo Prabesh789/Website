@@ -41,7 +41,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(height: 40),
+          SizedBox(height: 50),
           SizedBox(
             width: width * 0.5,
             child: Text(
@@ -65,6 +65,8 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
+            spacing: 0,
+            mainAxisSize: MainAxisSize.min,
             children: [
               // Left Arrow Button
               IconButton(
@@ -76,6 +78,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
                 height: 590,
                 width: width * 0.74,
                 child: ListView.builder(
+                  padding: EdgeInsets.zero,
                   addAutomaticKeepAlives: true,
                   shrinkWrap: true,
                   physics: BouncingScrollPhysics(),
