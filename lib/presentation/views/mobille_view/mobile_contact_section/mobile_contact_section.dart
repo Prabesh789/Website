@@ -138,13 +138,13 @@ class _MobileContactSectionState extends State<MobileContactSection> {
               children: [
                 MediaQuery.of(context).size.width < 1000
                     ? SizedBox.shrink()
-                    : ConnectWithMe(height: height),
+                    : ConnectWithMe(height: height, width: width),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MediaQuery.of(context).size.width < 1000
-                        ? ConnectWithMe(height: height)
+                        ? ConnectWithMe(height: height, width: width)
                         : SizedBox.shrink(),
                     MediaQuery.of(context).size.width < 760
                         ? Padding(
@@ -377,9 +377,10 @@ class _MobileContactSectionState extends State<MobileContactSection> {
 }
 
 class ConnectWithMe extends StatelessWidget {
-  const ConnectWithMe({super.key, required this.height});
+  const ConnectWithMe({super.key, required this.height, required this.width});
 
   final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -393,10 +394,18 @@ class ConnectWithMe extends StatelessWidget {
           textAlign: TextAlign.left,
         ),
         SizedBox(height: 10),
-        Text(
-          textAlign: TextAlign.center,
-          "This form is only for contacting me about opportunities to work \nor collaborate together. Please avoid it for general conversations.",
-          style: TextStyle(fontSize: 13, color: Colors.grey[700]),
+        SizedBox(
+          width: width * 0.8,
+          child: Center(
+            child: Text(
+              "This form is only for contacting me about opportunities to work or collaborate together. "
+              "Please avoid it for general conversations.", // Concatenated for readability
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 13, color: Colors.grey[700]),
+              softWrap: true, // Allows text to wrap
+              maxLines: 3, // Allows multiple lines
+            ),
+          ),
         ),
         SizedBox(height: 15),
         // Social Media Icons

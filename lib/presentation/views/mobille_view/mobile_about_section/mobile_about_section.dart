@@ -23,16 +23,16 @@ class _MobileAboutSectionState extends State<MobileAboutSection> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: width * 0.7,
+            width: width * 0.8,
             child: Text(
               "Hello, world!",
-              style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              width: width * 0.7,
+              width: width * 0.8,
               child: Text(
                 "I am Prabesh Rai. I am currently pursuing my Post-graduate degree in Business Analytics at Lambton College Ottawa. I am passionate about Data Analystics and Machine Learning.",
                 style: TextStyle(
@@ -44,7 +44,7 @@ class _MobileAboutSectionState extends State<MobileAboutSection> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              width: width * 0.7,
+              width: width * 0.8,
               child: Text(
                 "I am graduate in Computer Science and Engineering from University of Bedfordshire, In 2022. I have expereinced in developing mobile applications using Flutter and Dart.",
                 style: TextStyle(
@@ -55,12 +55,12 @@ class _MobileAboutSectionState extends State<MobileAboutSection> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: SizedBox(width: width * 0.7, child: Divider(color: kGrey)),
+            child: SizedBox(width: width * 0.8, child: Divider(color: kGrey)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              width: width * 0.7,
+              width: width * 0.8,
               child: Text(
                 "Lately",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
@@ -70,7 +70,7 @@ class _MobileAboutSectionState extends State<MobileAboutSection> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              width: width * 0.7,
+              width: width * 0.8,
               child: Text(
                 "My current goal is to strengthen my foundation in Machine Learning, Deep Learning, Data Structures & Algorithms, Computer Architecture, Data Analytics, and Business Analytics while continuing Mobile App Development. I aim to integrate these technologies to create innovative solutions.",
                 style: TextStyle(fontSize: 13),

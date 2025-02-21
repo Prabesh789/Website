@@ -53,7 +53,7 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              width: width * 0.7,
+              width: width * 0.8,
               child: Text(
                 "My portfolio includes Mobile App Development and Research Projects, Data Analysis Projects that I've contributed to or created personally.",
                 style: TextStyle(fontSize: 13),
@@ -73,8 +73,8 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
               ),
               // ListView with ScrollController
               SizedBox(
-                height: 595,
-                width: width * 0.7,
+                height: 590,
+                width: width * 0.8,
                 child: ListView.builder(
                   addAutomaticKeepAlives: true,
                   physics: BouncingScrollPhysics(),
