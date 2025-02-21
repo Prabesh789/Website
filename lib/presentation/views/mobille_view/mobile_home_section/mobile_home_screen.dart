@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
 import 'package:portfolio_web/presentation/utils/social_medial_icon.dart';
-import 'package:portfolio_web/presentation/views/desktop_view/main_section/main_section.dart';
 import 'package:portfolio_web/presentation/views/mobille_view/mobile_view_main_section.dart';
 
 class MobileHomeSection extends StatefulWidget {
