@@ -1,6 +1,7 @@
 // presentation/views/mobille_view/mobile_view_main_section.dart
 // presentation/views/desktop_view/main_section/main_section.dart
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/presentation/animation/entrance_fader.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/views/mobille_view/mobile_about_section/mobile_about_section.dart';
@@ -121,9 +122,13 @@ class _HomeSectionState extends State<MobileViewMainSection> {
           onPressed: () => _scroll(index),
           child: Text(
             childText,
-            style: TextStyle(
+            style: GoogleFonts.inter(
               fontSize: 12,
               color: kBlack,
+              fontWeight:
+                  _selectedIndex == index
+                      ? FontWeight.w600
+                      : FontWeight.w400, // Bold for selected
               decoration:
                   _selectedIndex == index
                       ? TextDecoration.underline

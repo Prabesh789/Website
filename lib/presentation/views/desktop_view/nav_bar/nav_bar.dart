@@ -1,5 +1,6 @@
 // presentation/views/desktop_view/nav_bar/nav_bar.dart
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NavBarLogo extends StatelessWidget {
   final double? height;
@@ -19,7 +20,10 @@ class NavBarLogo extends StatelessWidget {
           Text("< ", style: TextStyle(fontSize: height ?? 15)),
           Text(
             "Prabesh",
-            style: TextStyle(fontFamily: "Agustina", fontSize: height ?? 15),
+            style: GoogleFonts.spaceMono(
+              fontSize: height ?? 15,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           Flexible(
             child: Text(

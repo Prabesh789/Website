@@ -1,5 +1,6 @@
 // presentation/views/desktop_view/main_section/main_section.dart
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/presentation/animation/entrance_fader.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/about/about_section.dart';
@@ -72,7 +73,7 @@ class _MainSectionState extends State<MainSection> {
       appBar: AppBar(
         backgroundColor: kWhite,
         elevation: 0.0,
-        title: NavBarLogo(),
+        title: NavBarLogo(height: 20),
         actions: [
           for (int i = 0; i < _sectionsName.length; i++)
             _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
@@ -129,14 +130,18 @@ class _MainSectionState extends State<MainSection> {
               onPressed: () => _scroll(index),
               child: Text(
                 childText,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   fontSize: 14,
                   color: kBlack,
+                  fontWeight:
+                      _selectedIndex == index
+                          ? FontWeight.w600
+                          : FontWeight.w400, // Bold for selected
                   decoration:
                       _selectedIndex == index
                           ? TextDecoration.underline
                           : TextDecoration.none,
-                  decorationThickness: 0.7,
+                  decorationThickness: 1.0,
                   decorationColor: kBlack,
                   decorationStyle: TextDecorationStyle.solid,
                 ),
