@@ -1,17 +1,18 @@
+// presentation/views/mobille_view/mobile_project_section/mobile_project_section.dart
 // presentation/views/desktop_view/project_section/project_section.dart
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
 
-class ProjectSection extends StatefulWidget {
-  const ProjectSection({super.key});
+class MobileProjectSection extends StatefulWidget {
+  const MobileProjectSection({super.key});
 
   @override
-  State<ProjectSection> createState() => _ProjectSectionState();
+  State<MobileProjectSection> createState() => _MobileProjectSectionState();
 }
 
-class _ProjectSectionState extends State<ProjectSection> {
+class _MobileProjectSectionState extends State<MobileProjectSection> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -45,19 +46,17 @@ class _ProjectSectionState extends State<ProjectSection> {
             width: width * 0.5,
             child: Text(
               "Portfolio",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              width: width * 0.5,
+              width: width * 0.7,
               child: Text(
                 "My portfolio includes Mobile App Development and Research Projects, Data Analysis Projects that I've contributed to or created personally.",
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.width > 760 ? 15 : 13,
-                ),
+                style: TextStyle(fontSize: 13),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -69,7 +68,7 @@ class _ProjectSectionState extends State<ProjectSection> {
             children: [
               // Left Arrow Button
               IconButton(
-                icon: Icon(Icons.arrow_back, size: 30),
+                icon: Icon(Icons.arrow_back, size: 20),
                 onPressed: scrollLeft,
               ),
               // ListView with ScrollController
@@ -103,7 +102,7 @@ class _ProjectSectionState extends State<ProjectSection> {
               SizedBox(width: 20),
               // Right Arrow Button
               IconButton(
-                icon: Icon(Icons.arrow_forward, size: 30),
+                icon: Icon(Icons.arrow_forward, size: 20),
                 onPressed: scrollRight,
               ),
             ],

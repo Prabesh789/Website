@@ -1,4 +1,4 @@
-// presentation/views/desktop_view/contact_section/contact_section.dart
+// presentation/views/mobille_view/mobile_contact_section/mobile_contact_section.dart
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http show post;
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
@@ -6,14 +6,14 @@ import 'package:portfolio_web/presentation/configs/const_strings.dart';
 import 'package:portfolio_web/presentation/utils/social_medial_icon.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/footer_section/footer_section.dart';
 
-class ContactSection extends StatefulWidget {
-  const ContactSection({super.key});
+class MobileContactSection extends StatefulWidget {
+  const MobileContactSection({super.key});
 
   @override
-  State<ContactSection> createState() => _ContactSectionState();
+  State<MobileContactSection> createState() => _MobileContactSectionState();
 }
 
-class _ContactSectionState extends State<ContactSection> {
+class _MobileContactSectionState extends State<MobileContactSection> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
@@ -181,7 +181,7 @@ class _ContactSectionState extends State<ContactSection> {
         ),
         SizedBox(height: 10),
         SizedBox(
-          width: 450,
+          width: width * 0.7,
           child: TextFormField(
             cursorColor: kGrey,
             controller: _nameController,
@@ -238,7 +238,7 @@ class _ContactSectionState extends State<ContactSection> {
         Text("Email", style: TextStyle(fontSize: 14, color: Colors.grey[700])),
         SizedBox(height: 10),
         SizedBox(
-          width: 450,
+          width: width * 0.7,
           child: TextFormField(
             cursorColor: kGrey,
             controller: _emailController,
@@ -302,7 +302,7 @@ class _ContactSectionState extends State<ContactSection> {
         ),
         SizedBox(height: 10),
         SizedBox(
-          width: 450,
+          width: width * 0.7,
           child: TextFormField(
             maxLines: width < 760 ? 3 : 5,
             cursorColor: kGrey,
@@ -384,22 +384,21 @@ class ConnectWithMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment:
-          MediaQuery.of(context).size.width > 760
-              ? CrossAxisAlignment.start
-              : CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           "Connect with Me",
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           textAlign: TextAlign.left,
         ),
         SizedBox(height: 10),
         Text(
-          "This form is only for contacting me about opportunities to work or collaborate together.\nPlease avoid it for general conversations.",
+          textAlign: TextAlign.center,
+          "This form is only for contacting me about opportunities to work \nor collaborate together. Please avoid it for general conversations.",
           style: TextStyle(fontSize: 13, color: Colors.grey[700]),
         ),
+        SizedBox(height: 15),
         // Social Media Icons
         SizedBox(
           height: height * 0.050,
