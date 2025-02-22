@@ -1,5 +1,6 @@
 // presentation/views/desktop_view/contact_section/contact_section.dart
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http show post;
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
@@ -177,7 +178,11 @@ class _ContactSectionState extends State<ContactSection> {
       children: [
         Text(
           "Full Name",
-          style: TextStyle(fontSize: 14, color: Colors.grey[700]),
+          style: GoogleFonts.nunitoSans(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            color: Colors.black87,
+          ),
         ),
         SizedBox(height: 10),
         SizedBox(
@@ -188,7 +193,10 @@ class _ContactSectionState extends State<ContactSection> {
             focusNode: _nameFocus,
             decoration: InputDecoration(
               hintText: "Enter your name",
-              hintStyle: TextStyle(fontSize: 14, color: Colors.grey[700]),
+              hintStyle: GoogleFonts.inter(
+                fontSize: 14,
+                color: Colors.grey[600],
+              ),
               border: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Colors.grey,
@@ -235,7 +243,14 @@ class _ContactSectionState extends State<ContactSection> {
           ),
         ),
         SizedBox(height: 10),
-        Text("Email", style: TextStyle(fontSize: 14, color: Colors.grey[700])),
+        Text(
+          "Email",
+          style: GoogleFonts.nunitoSans(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            color: Colors.black87,
+          ),
+        ),
         SizedBox(height: 10),
         SizedBox(
           width: 450,
@@ -245,7 +260,10 @@ class _ContactSectionState extends State<ContactSection> {
             focusNode: _emailFocus,
             decoration: InputDecoration(
               hintText: "youremail@gmail.com",
-              hintStyle: TextStyle(fontSize: 14, color: Colors.grey[700]),
+              hintStyle: GoogleFonts.inter(
+                fontSize: 14,
+                color: Colors.grey[600],
+              ),
               border: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Colors.grey,
@@ -298,7 +316,11 @@ class _ContactSectionState extends State<ContactSection> {
         SizedBox(height: 10),
         Text(
           "Message",
-          style: TextStyle(fontSize: 14, color: Colors.grey[700]),
+          style: GoogleFonts.nunitoSans(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            color: Colors.black87,
+          ),
         ),
         SizedBox(height: 10),
         SizedBox(
@@ -310,7 +332,10 @@ class _ContactSectionState extends State<ContactSection> {
             focusNode: _messageFocus,
             decoration: InputDecoration(
               hintText: "Hi, I would like to reach out to you...",
-              hintStyle: TextStyle(fontSize: 14, color: Colors.grey[700]),
+              hintStyle: GoogleFonts.inter(
+                fontSize: 14,
+                color: Colors.grey[600],
+              ),
               border: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Colors.grey,
@@ -362,12 +387,20 @@ class _ContactSectionState extends State<ContactSection> {
           child: ElevatedButton(
             onPressed: _submitForm,
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black,
+              backgroundColor: Colors.black, // Primary color
               padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              elevation: 3, // Subtle shadow effect
             ),
             child: Text(
               "SEND MESSAGE",
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: GoogleFonts.roboto(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
@@ -390,16 +423,28 @@ class ConnectWithMe extends StatelessWidget {
               : CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        // Title
         Text(
           "Connect with Me",
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          style: GoogleFonts.montserrat(
+            fontSize: 42,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1.2,
+            color: Colors.black87,
+          ),
           textAlign: TextAlign.left,
         ),
         SizedBox(height: 10),
+        // Improved Subtitle
         Text(
-          "This form is only for contacting me about opportunities to work or collaborate together.\nPlease avoid it for general conversations.",
-          style: TextStyle(fontSize: 13, color: Colors.grey[700]),
+          "This form is for contacting me about opportunities to work or collaborate.\nPlease avoid general conversations.",
+          style: GoogleFonts.poppins(
+            fontSize: 14,
+            color: Colors.black54,
+            height: 1.5,
+          ),
         ),
+
         // Social Media Icons
         SizedBox(
           height: height * 0.050,
@@ -411,7 +456,7 @@ class ConnectWithMe extends StatelessWidget {
                 SocialMediaIconBtn(
                   icon: kSocialIcons[i],
                   socialLink: kSocialLinks[i],
-                  height: 20,
+                  height: 25,
                 ),
             ],
           ),

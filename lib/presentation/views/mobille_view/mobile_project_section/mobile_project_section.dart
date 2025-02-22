@@ -2,6 +2,7 @@
 // presentation/views/desktop_view/project_section/project_section.dart
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
 
@@ -42,11 +43,17 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 50),
+          // Portfolio title
           SizedBox(
             width: width * 0.5,
             child: Text(
               "Portfolio",
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.2,
+                color: Colors.black87,
+              ),
               textAlign: TextAlign.center,
             ),
           ),
@@ -55,8 +62,12 @@ class _MobileProjectSectionState extends State<MobileProjectSection> {
             child: SizedBox(
               width: width * 0.8,
               child: Text(
-                "My portfolio includes mobile app development, research projects, and data analysis projects.",
-                style: TextStyle(fontSize: 13),
+                "A collection of my Mobile App Development, Research, and Data Analysis projects.",
+                style: GoogleFonts.poppins(
+                  fontSize: 13,
+                  color: Colors.black54,
+                  height: 1.5,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -156,14 +167,11 @@ class _ProjectState extends State<Project> {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.white, // Background color
-              borderRadius: BorderRadius.circular(10), // Rounded corners
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
-                  // ignore: deprecated_member_use
-                  color: Colors.grey.withOpacity(
-                    0.2,
-                  ), // Shadow color with opacity
+                  color: Colors.grey.withValues(alpha: (0.2 * 255).toDouble()),
                   spreadRadius: 2, // How much the shadow spreads
                   blurRadius: 10, // Softness of the shadow
                   offset: Offset(4, 4), // Position of shadow (X, Y)
@@ -181,22 +189,26 @@ class _ProjectState extends State<Project> {
             ),
           ),
           SizedBox(height: 10),
+          // Project Titles
           Text(
             widget.title,
-            style: TextStyle(
+            style: GoogleFonts.inter(
               fontSize: 13,
               fontWeight: FontWeight.w600,
               decoration: TextDecoration.underline,
-              decorationThickness: 2,
-              decorationColor: kBlack,
+              decorationThickness: 1.5,
+              decorationColor: Colors.black87,
             ),
-            textAlign: TextAlign.start,
           ),
           SizedBox(height: 6),
+          // Project Description
           Text(
             widget.description,
-            style: TextStyle(fontSize: 13),
-            textAlign: TextAlign.start,
+            style: GoogleFonts.poppins(
+              fontSize: 12,
+              color: Colors.black54,
+              height: 1.5, // Better spacing
+            ),
           ),
           SizedBox(height: 10),
           Row(
@@ -240,7 +252,7 @@ class _ProjectState extends State<Project> {
                             SizedBox(width: 8),
                             Text(
                               "CODE",
-                              style: TextStyle(
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -291,8 +303,8 @@ class _ProjectState extends State<Project> {
                             ),
                             SizedBox(width: 8),
                             Text(
-                              "PAPER",
-                              style: TextStyle(
+                              "THESIS PAPER",
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -345,7 +357,7 @@ class _ProjectState extends State<Project> {
                             SizedBox(width: 8),
                             Text(
                               "DASHBOARD",
-                              style: TextStyle(
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -397,7 +409,7 @@ class _ProjectState extends State<Project> {
                             SizedBox(width: 8),
                             Text(
                               "PLAY CONSOLE",
-                              style: TextStyle(
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,

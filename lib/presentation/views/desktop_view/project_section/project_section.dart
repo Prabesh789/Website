@@ -1,6 +1,7 @@
 // presentation/views/desktop_view/project_section/project_section.dart
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/configs/const_strings.dart';
 
@@ -41,27 +42,40 @@ class _ProjectSectionState extends State<ProjectSection> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 100),
+          // Portfolio title
           SizedBox(
             width: width * 0.5,
             child: Text(
               "Portfolio",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              style: GoogleFonts.montserrat(
+                fontSize: 42,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.2,
+                color: Colors.black87,
+              ),
               textAlign: TextAlign.center,
             ),
           ),
+          // Portfolio Subtitle
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 12.0,
+              vertical: 8.0,
+            ),
             child: SizedBox(
-              width: width * 0.5,
+              width: width * 0.6,
               child: Text(
-                "My portfolio includes Mobile App Development and Research Projects, Data Analysis Projects that I've contributed to or created personally.",
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.width > 760 ? 15 : 13,
+                "A collection of my Mobile App Development, Research, and Data Analysis projects.",
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  color: Colors.black54,
+                  height: 1.5,
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
           ),
+
           SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +83,7 @@ class _ProjectSectionState extends State<ProjectSection> {
             children: [
               // Left Arrow Button
               IconButton(
-                icon: Icon(Icons.arrow_back, size: 30),
+                icon: Icon(Icons.arrow_back_ios, size: 30),
                 onPressed: scrollLeft,
               ),
               // ListView with ScrollController
@@ -103,7 +117,7 @@ class _ProjectSectionState extends State<ProjectSection> {
               SizedBox(width: 20),
               // Right Arrow Button
               IconButton(
-                icon: Icon(Icons.arrow_forward, size: 30),
+                icon: Icon(Icons.arrow_forward_ios, size: 30),
                 onPressed: scrollRight,
               ),
             ],
@@ -158,10 +172,7 @@ class _ProjectState extends State<Project> {
               borderRadius: BorderRadius.circular(10), // Rounded corners
               boxShadow: [
                 BoxShadow(
-                  // ignore: deprecated_member_use
-                  color: Colors.grey.withOpacity(
-                    0.2,
-                  ), // Shadow color with opacity
+                  color: Colors.grey.withValues(alpha: (0.2 * 255).toDouble()),
                   spreadRadius: 2, // How much the shadow spreads
                   blurRadius: 10, // Softness of the shadow
                   offset: Offset(4, 4), // Position of shadow (X, Y)
@@ -179,23 +190,28 @@ class _ProjectState extends State<Project> {
             ),
           ),
           SizedBox(height: 10),
+          // Project Titles
           Text(
             widget.title,
-            style: TextStyle(
-              fontSize: 13,
+            style: GoogleFonts.inter(
+              fontSize: 15,
               fontWeight: FontWeight.w600,
               decoration: TextDecoration.underline,
-              decorationThickness: 2,
-              decorationColor: kBlack,
+              decorationThickness: 1.5,
+              decorationColor: Colors.black87,
             ),
-            textAlign: TextAlign.start,
           ),
           SizedBox(height: 6),
+          // Project Description
           Text(
             widget.description,
-            style: TextStyle(fontSize: 13),
-            textAlign: TextAlign.start,
+            style: GoogleFonts.poppins(
+              fontSize: 14,
+              color: Colors.black54,
+              height: 1.5, // Better spacing
+            ),
           ),
+
           SizedBox(height: 10),
           Row(
             children: [
@@ -238,7 +254,7 @@ class _ProjectState extends State<Project> {
                             SizedBox(width: 8),
                             Text(
                               "CODE",
-                              style: TextStyle(
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -289,8 +305,8 @@ class _ProjectState extends State<Project> {
                             ),
                             SizedBox(width: 8),
                             Text(
-                              "PAPER",
-                              style: TextStyle(
+                              "THESIS PAPER",
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -343,7 +359,7 @@ class _ProjectState extends State<Project> {
                             SizedBox(width: 8),
                             Text(
                               "DASHBOARD",
-                              style: TextStyle(
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -395,7 +411,7 @@ class _ProjectState extends State<Project> {
                             SizedBox(width: 8),
                             Text(
                               "PLAY CONSOLE",
-                              style: TextStyle(
+                              style: GoogleFonts.robotoMono(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,

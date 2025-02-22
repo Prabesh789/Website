@@ -23,23 +23,6 @@ void launchURL(String url) async =>
 
 final List<Map<String, String>> kProjects = [
   {
-    'kProjectBanner': "assets/trek.png",
-    'kProjectTitle': "Trek-High Nepal",
-    'kProjectsDescription':
-        "Mobile app promoting e-tourism in Nepal, featuring real-time hiking route updates and emergency alerts.",
-    'kProjectLink': "https://github.com/Prabesh789/Trek-High/tree/main",
-    'kProjectThesisPaper':
-        "https://drive.google.com/file/d/1GoNvlYWyHyffhsZj33vYVf4kvXLIs2z-/view",
-  },
-  {
-    'kProjectBanner': "assets/note_book.png",
-    'kProjectTitle': "Notebook",
-    'kProjectsDescription':
-        "Intuitive and optimized note-taking app with a user-friendly interface for creating, editing, and deleting notes.",
-    "kAppStoreLink":
-        "https://play.google.com/store/apps/details?id=com.prabeshrai.note_book",
-  },
-  {
     'kProjectBanner': "assets/tourism_dashboard.png",
     'kProjectTitle': "Global Tourism Dashboard",
     'kProjectsDescription':
@@ -55,6 +38,23 @@ final List<Map<String, String>> kProjects = [
         "Tableau dashboard analyzing Airbnb data for trends in listings, pricing, availability, and host behavior.",
     'kProjectDashboard':
         "https://public.tableau.com/app/profile/prabesh.rai6215/viz/AirbnbFullProject_17344635039170/Dashboard1",
+  },
+  {
+    'kProjectBanner': "assets/trek.png",
+    'kProjectTitle': "Trek-High Nepal",
+    'kProjectsDescription':
+        "Mobile app promoting e-tourism in Nepal, featuring real-time hiking route updates and emergency alerts.",
+    'kProjectLink': "https://github.com/Prabesh789/Trek-High/tree/main",
+    'kProjectThesisPaper':
+        "https://drive.google.com/file/d/1GoNvlYWyHyffhsZj33vYVf4kvXLIs2z-/view",
+  },
+  {
+    'kProjectBanner': "assets/note_book.png",
+    'kProjectTitle': "Notebook",
+    'kProjectsDescription':
+        "Intuitive and optimized note-taking app with a user-friendly interface for creating, editing, and deleting notes.",
+    "kAppStoreLink":
+        "https://play.google.com/store/apps/details?id=com.prabeshrai.note_book",
   },
 ];
 
