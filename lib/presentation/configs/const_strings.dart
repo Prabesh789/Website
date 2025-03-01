@@ -32,6 +32,14 @@ final List<Map<String, String>> kProjects = [
         "https://app.powerbi.com/view?r=eyJrIjoiZTVjYzRmZDAtNGI4MS00YjU5LTg4YzctYTBkOGY3ZGNiZTM1IiwidCI6ImI2NDE3Y2QwLTFmNzMtNDQ3MS05YTM5LTIwOTUzODIyYTM0YSIsImMiOjN9",
   },
   {
+    'kProjectBanner': "assets/eda.png",
+    'kProjectTitle': "Exploratory Data Analysis (EDA)",
+    'kProjectsDescription':
+        "EDA for analyzing primary cancer cases in Canada (1992-2022) using Python.",
+    'kProjectLink':
+        "https://github.com/Prabesh789/Exploratory-data-analysis-EDA-/blob/main/data_insights/src/EDA.ipynb",
+  },
+  {
     'kProjectBanner': "assets/air_bnb.png",
     'kProjectTitle': "Airbnb Trends Analysis",
     'kProjectsDescription':
