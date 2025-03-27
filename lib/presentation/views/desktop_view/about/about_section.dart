@@ -52,7 +52,7 @@ class _AboutSectionState extends State<AboutSection> {
             child: SizedBox(
               width: width * 0.5,
               child: Text(
-                "I hold a Bachelor's degree in Computer Science & Engineering from the University of Bedfordshire (2022). "
+                "I hold a Bachelor's degree in Computer Science & Software Engineering from the University of Bedfordshire (2022). "
                 "With experience in mobile app development, I specialize in building applications using Flutter and Dart.",
                 style: GoogleFonts.lato(
                   fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,

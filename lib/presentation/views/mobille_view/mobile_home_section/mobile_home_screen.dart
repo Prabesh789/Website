@@ -181,7 +181,7 @@ class _OverviewState extends State<Overview>
         SizedBox(
           width: widget.width * 0.8,
           child: Text(
-            "I am a Computer Science Graduate pursuing Post-Graduate Degree In Business Analytics at Lambton College.",
+            "I am a Computer Science & Software Engineering Graduate pursuing Post-Graduate Degree In Business Analytics at Lambton College.",
             style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             textAlign: TextAlign.center, // Aligns the text properly
           ),

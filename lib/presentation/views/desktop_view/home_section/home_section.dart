@@ -200,7 +200,7 @@ class _OverviewState extends State<Overview>
 
         // About Section
         Text(
-          "I am a Computer Science Graduate pursuing \nPost-Graduate In Business Analytics at Lambton College.",
+          "I am a Computer Science & Software Engineering Graduate pursuing \nPost-Graduate In Business Analytics at Lambton College.",
           style: GoogleFonts.lato(
             fontSize: 14,
             fontWeight: FontWeight.w400,
