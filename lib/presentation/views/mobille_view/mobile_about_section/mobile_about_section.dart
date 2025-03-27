@@ -89,8 +89,7 @@ class _MobileAboutSectionState extends State<MobileAboutSection> {
             child: SizedBox(
               width: width * 0.8,
               child: Text(
-                "My current goal is to deepen my knowledge in Machine Learning, Deep Learning, Data Structures & Algorithms, "
-                "Computer Architecture, and Business Analytics, while continuing my journey in Mobile App Development. "
+                "My current goal is to deepen my knowledge Business/Data Analytics, while continuing my journey in Mobile App Development. "
                 "I aim to integrate these technologies to develop innovative, data-driven solutions that solve real-world problems.",
                 style: GoogleFonts.lato(
                   fontSize: 14,

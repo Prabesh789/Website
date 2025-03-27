@@ -194,7 +194,14 @@ class _OverviewState extends State<Overview>
               duration: Duration(seconds: 1),
             );
           },
-          child: Text("Learn more ->", style: TextStyle(fontSize: 13)),
+          child: Text(
+            "Learn more ->",
+            style: GoogleFonts.inter(
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              color: Colors.blueAccent,
+            ),
+          ),
         ),
       ],
     );
