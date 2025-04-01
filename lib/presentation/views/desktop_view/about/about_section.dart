@@ -37,8 +37,8 @@ class _AboutSectionState extends State<AboutSection> {
             child: SizedBox(
               width: width * 0.5,
               child: Text(
-                "Hi, I’m Prabesh Rai, a Business Analytics postgraduate student at Lambton College, Ottawa. "
-                "I’m deeply passionate about Data Analytics and Machine Learning.",
+                "I’m Prabesh Rai, currently pursuing Business Analytics at Lambton College in Ottawa. "
+                "I’m deeply passionate about turning data into actionable insights and exploring the power of machine learning to solve real-world problems.",
                 style: GoogleFonts.lato(
                   fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,
                   color: Colors.black87,

@@ -38,8 +38,8 @@ class _MobileAboutSectionState extends State<MobileAboutSection> {
             child: SizedBox(
               width: width * 0.8,
               child: Text(
-                "Hi, I’m Prabesh Rai, a Business Analytics postgraduate student at Lambton College, Ottawa. "
-                "I’m deeply passionate about Data Analytics and Machine Learning.",
+                "Hi, I’m Prabesh Rai, currently pursuing Business Analytics at Lambton College in Ottawa. "
+                "I’m deeply passionate about turning data into actionable insights and exploring the power of machine learning to solve real-world problems.",
                 style: GoogleFonts.lato(
                   fontSize: 14, // Optimized for mobile
                   color: Colors.black87,
