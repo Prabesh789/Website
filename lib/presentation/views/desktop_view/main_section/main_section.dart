@@ -1,6 +1,7 @@
 // presentation/views/desktop_view/main_section/main_section.dart
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_web/presentation/animation/bubble_bg.dart';
 import 'package:portfolio_web/presentation/animation/entrance_fader.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/about/about_section.dart';
@@ -59,10 +60,9 @@ class _MainSectionState extends State<MainSection> {
     } else if (i == 2) {
       return ProjectSection();
     } else if (i == 3) {
-      // return BlogSection();
       return ContactSection();
     } else {
-      return Container();
+      return SizedBox.shrink();
     }
   }
 
@@ -92,9 +92,9 @@ class _MainSectionState extends State<MainSection> {
           child: ScrollablePositionedList.builder(
             itemScrollController: itemScrollController,
             itemPositionsListener: _itemPositionListener,
-            itemCount: 6,
+            itemCount: _sectionsName.length,
             itemBuilder: (context, index) {
-              return sectionWidget(index);
+              return BubbleBG(child: sectionWidget(index));
             },
           ),
         ),
