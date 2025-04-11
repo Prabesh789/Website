@@ -2,6 +2,7 @@
 // presentation/views/desktop_view/main_section/main_section.dart
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_web/presentation/animation/bubble_bg.dart';
 import 'package:portfolio_web/presentation/animation/entrance_fader.dart';
 import 'package:portfolio_web/presentation/configs/const_colors.dart';
 import 'package:portfolio_web/presentation/views/mobille_view/mobile_about_section/mobile_about_section.dart';
@@ -65,7 +66,7 @@ class _HomeSectionState extends State<MobileViewMainSection> {
       // return BlogSection();
       return MobileContactSection();
     } else {
-      return Container();
+      return SizedBox.shrink();
     }
   }
 
@@ -101,9 +102,9 @@ class _HomeSectionState extends State<MobileViewMainSection> {
           child: ScrollablePositionedList.builder(
             itemScrollController: itemForMobileScrollController,
             itemPositionsListener: _itemPositionListener,
-            itemCount: 4,
+            itemCount: _sectionsName.length,
             itemBuilder: (context, index) {
-              return sectionWidget(index);
+              return BubbleBG(child: sectionWidget(index));
             },
           ),
         ),
