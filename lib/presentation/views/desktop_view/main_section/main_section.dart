@@ -9,6 +9,7 @@ import 'package:portfolio_web/presentation/views/desktop_view/contact_section/co
 import 'package:portfolio_web/presentation/views/desktop_view/home_section/home_section.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/nav_bar/nav_bar.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/project_section/project_section.dart';
+import 'package:portfolio_web/presentation/views/desktop_view/work_and_academic/work_and_academic.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 final ItemScrollController itemScrollController = ItemScrollController();
@@ -31,7 +32,7 @@ class _MainSectionState extends State<MainSection> {
     "HOME",
     "ABOUT",
     "PROJECTS",
-    // "BLOG",
+    "WORKS & ACADEMIC BACKGROUND",
     "CONTACT",
   ];
   var _selectedIndex = 0;
@@ -54,15 +55,16 @@ class _MainSectionState extends State<MainSection> {
   Widget sectionWidget(int i) {
     if (i == 0) {
       return HomeSection();
-      // return ContactSection();
     } else if (i == 1) {
       return AboutSection();
     } else if (i == 2) {
       return ProjectSection();
     } else if (i == 3) {
+      return WorkAndAcademic();
+    } else if (i == 4) {
       return ContactSection();
     } else {
-      return SizedBox.shrink();
+      return Container(); // Fallback widget if no match found
     }
   }
 
