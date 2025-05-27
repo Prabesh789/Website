@@ -1,7 +1,6 @@
 // presentation/views/desktop_view/work_and_academic/work_and_academic.dart
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio_web/presentation/utils/extensions/theme.dart';
 
 class WorkAndAcademic extends StatefulWidget {
   const WorkAndAcademic({super.key});
