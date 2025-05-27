@@ -30,9 +30,9 @@ class _MainSectionState extends State<MainSection> {
       ItemPositionsListener.create();
   final List<String> _sectionsName = [
     "HOME",
-    "ABOUT",
+    "EXPERIENCE & EDUCATION",
     "PROJECTS",
-    "WORKS & ACADEMIC BACKGROUND",
+    "ABOUT",
     "CONTACT",
   ];
   var _selectedIndex = 0;
@@ -56,11 +56,11 @@ class _MainSectionState extends State<MainSection> {
     if (i == 0) {
       return HomeSection();
     } else if (i == 1) {
-      return AboutSection();
+      return WorkAndAcademic();
     } else if (i == 2) {
       return ProjectSection();
     } else if (i == 3) {
-      return WorkAndAcademic();
+      return AboutSection();
     } else if (i == 4) {
       return ContactSection();
     } else {
@@ -70,6 +70,7 @@ class _MainSectionState extends State<MainSection> {
 
   @override
   Widget build(BuildContext context) {
+    final width2 = MediaQuery.of(context).size.width < 400;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -80,9 +81,9 @@ class _MainSectionState extends State<MainSection> {
           for (int i = 0; i < _sectionsName.length; i++)
             _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
         ],
-        actionsPadding: EdgeInsets.only(right: 60, bottom: 15),
+        actionsPadding: EdgeInsets.only(right: width2 ? 60 : 30, bottom: 15),
       ),
-      drawer: MediaQuery.of(context).size.width < 400 ? _appBarMobile() : null,
+      drawer: width2 ? _appBarMobile() : null,
       body: Container(
         color: kWhite,
         height: MediaQuery.of(context).size.height,
@@ -133,7 +134,7 @@ class _MainSectionState extends State<MainSection> {
               child: Text(
                 childText,
                 style: GoogleFonts.inter(
-                  fontSize: 14,
+                  fontSize: 13,
                   color: kBlack,
                   fontWeight:
                       _selectedIndex == index

@@ -23,7 +23,7 @@ class _BubbleBGState extends State<BubbleBG>
       duration: const Duration(seconds: 20),
     )..repeat();
 
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 3; i++) {
       _bubbles.add(Bubble());
     }
   }

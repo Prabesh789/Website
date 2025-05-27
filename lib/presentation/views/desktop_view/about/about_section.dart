@@ -26,7 +26,7 @@ class _AboutSectionState extends State<AboutSection> {
             child: Text(
               "Hello, world!",
               style: GoogleFonts.montserrat(
-                fontSize: MediaQuery.of(context).size.width > 760 ? 70 : 50,
+                fontSize: MediaQuery.of(context).size.width > 760 ? 40 : 30,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87,
               ),
@@ -76,7 +76,7 @@ class _AboutSectionState extends State<AboutSection> {
               child: Text(
                 "Lately",
                 style: GoogleFonts.montserrat(
-                  fontSize: MediaQuery.of(context).size.width > 760 ? 50 : 30,
+                  fontSize: MediaQuery.of(context).size.width > 760 ? 40 : 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
                 ),
