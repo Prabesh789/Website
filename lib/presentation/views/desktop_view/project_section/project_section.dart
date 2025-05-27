@@ -66,10 +66,11 @@ class _ProjectSectionState extends State<ProjectSection> {
               width: width * 0.6,
               child: Text(
                 "A collection of my Mobile App Development, Research, and Data Analysis projects.",
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  color: Colors.black54,
+                style: GoogleFonts.lato(
+                  fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 12,
+                  color: Colors.black87,
                   height: 1.5,
+                  fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -205,10 +206,11 @@ class _ProjectState extends State<Project> {
           // Project Description
           Text(
             widget.description,
-            style: GoogleFonts.poppins(
-              fontSize: 14,
-              color: Colors.black54,
-              height: 1.5, // Better spacing
+            style: GoogleFonts.lato(
+              fontSize: MediaQuery.of(context).size.width > 760 ? 14 : 12,
+              color: Colors.black,
+              height: 1.5,
+              fontWeight: FontWeight.bold,
             ),
           ),
 

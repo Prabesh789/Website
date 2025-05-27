@@ -9,6 +9,7 @@ import 'package:portfolio_web/presentation/views/desktop_view/contact_section/co
 import 'package:portfolio_web/presentation/views/desktop_view/home_section/home_section.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/nav_bar/nav_bar.dart';
 import 'package:portfolio_web/presentation/views/desktop_view/project_section/project_section.dart';
+import 'package:portfolio_web/presentation/views/desktop_view/work_and_academic/work_and_academic.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 final ItemScrollController itemScrollController = ItemScrollController();
@@ -29,9 +30,9 @@ class _MainSectionState extends State<MainSection> {
       ItemPositionsListener.create();
   final List<String> _sectionsName = [
     "HOME",
-    "ABOUT",
+    "EXPERIENCE & EDUCATION",
     "PROJECTS",
-    // "BLOG",
+    "ABOUT",
     "CONTACT",
   ];
   var _selectedIndex = 0;
@@ -54,20 +55,22 @@ class _MainSectionState extends State<MainSection> {
   Widget sectionWidget(int i) {
     if (i == 0) {
       return HomeSection();
-      // return ContactSection();
     } else if (i == 1) {
-      return AboutSection();
+      return WorkAndAcademic();
     } else if (i == 2) {
       return ProjectSection();
     } else if (i == 3) {
+      return AboutSection();
+    } else if (i == 4) {
       return ContactSection();
     } else {
-      return SizedBox.shrink();
+      return Container(); // Fallback widget if no match found
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final width2 = MediaQuery.of(context).size.width < 400;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -78,9 +81,9 @@ class _MainSectionState extends State<MainSection> {
           for (int i = 0; i < _sectionsName.length; i++)
             _appBarActions(_sectionsName[i], i, _sectionsIcons[i]),
         ],
-        actionsPadding: EdgeInsets.only(right: 60, bottom: 15),
+        actionsPadding: EdgeInsets.only(right: width2 ? 60 : 30, bottom: 15),
       ),
-      drawer: MediaQuery.of(context).size.width < 400 ? _appBarMobile() : null,
+      drawer: width2 ? _appBarMobile() : null,
       body: Container(
         color: kWhite,
         height: MediaQuery.of(context).size.height,
@@ -131,7 +134,7 @@ class _MainSectionState extends State<MainSection> {
               child: Text(
                 childText,
                 style: GoogleFonts.inter(
-                  fontSize: 14,
+                  fontSize: 13,
                   color: kBlack,
                   fontWeight:
                       _selectedIndex == index
