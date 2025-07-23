@@ -47,6 +47,10 @@ class _WorkAndAcademicState extends State<WorkAndAcademic> {
     'BA Blitz 2025 Hackathon (ABLE Autism Challenge)',
   ];
 
+  final List<String> volunteering = [
+    'Community Volunteer Income Tax Program (CVITP) | March - April 2025 | Tungasuvvingat Inuit (TI)',
+  ];
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -121,43 +125,107 @@ class _WorkAndAcademicState extends State<WorkAndAcademic> {
             const SizedBox(height: 50),
 
             /// Certifications Section
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Certifications & Hackathons",
-                style: GoogleFonts.montserrat(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.2,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-            const SizedBox(height: 10),
-            ...certifications.map(
-              (cert) => Padding(
-                padding: const EdgeInsets.only(bottom: 12.0),
-                child: Row(
-                  children: [
-                    const Icon(Icons.verified, color: Colors.green, size: 20),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        cert,
-                        style: GoogleFonts.lato(
-                          fontSize:
-                              MediaQuery.of(context).size.width > 760 ? 14 : 12,
-                          color: Colors.black,
-                          height: 1.5,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Certifications & Hackathons",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 25,
                           fontWeight: FontWeight.bold,
+                          letterSpacing: 1.2,
+                          color: Colors.black,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      const SizedBox(height: 10),
+                      ...certifications.map(
+                        (cert) => Padding(
+                          padding: const EdgeInsets.only(bottom: 12.0),
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.verified,
+                                color: Colors.green,
+                                size: 20,
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  cert,
+                                  style: GoogleFonts.lato(
+                                    fontSize:
+                                        MediaQuery.of(context).size.width > 760
+                                            ? 14
+                                            : 12,
+                                    color: Colors.black,
+                                    height: 1.5,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
+                const SizedBox(width: 40),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Voluntering & Leadership",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.2,
+                          color: Colors.black,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      const SizedBox(height: 10),
+                      ...volunteering.map(
+                        (cert) => Padding(
+                          padding: const EdgeInsets.only(bottom: 12.0),
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.verified,
+                                color: Colors.green,
+                                size: 20,
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  cert,
+                                  style: GoogleFonts.lato(
+                                    fontSize:
+                                        MediaQuery.of(context).size.width > 760
+                                            ? 14
+                                            : 12,
+                                    color: Colors.black,
+                                    height: 1.5,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
+
             const SizedBox(height: 60),
           ],
         ),
