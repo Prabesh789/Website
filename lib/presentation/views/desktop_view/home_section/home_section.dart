@@ -144,7 +144,7 @@ class _OverviewState extends State<Overview>
           ),
         ),
         Text(
-          "Postgraduate Diploma – Lambton College, Ottawa (2023–2025)",
+          "Postgraduate Diploma – Lambton College, Ottawa (2024–2025)",
           style: GoogleFonts.raleway(
             fontSize: 13,
             fontWeight: FontWeight.w600,

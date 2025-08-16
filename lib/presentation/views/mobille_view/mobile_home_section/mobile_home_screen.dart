@@ -124,7 +124,7 @@ class _OverviewState extends State<Overview>
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
         Text(
-          "BUSINESS ANALYTICS STUDENT @ LAMBTON COLLEGE",
+          "BUSINESS ANALYTICS GRADUATE @ POSTGRADUATE - LAMBTON COLLEGE (2024-2025)",
           style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 14),
@@ -181,7 +181,7 @@ class _OverviewState extends State<Overview>
         SizedBox(
           width: widget.width * 0.8,
           child: Text(
-            "I am a Computer Science & Software Engineering Graduate pursuing Post-Graduate Degree In Business Analytics at Lambton College.",
+            "Business Analytics Graduate specializing in data analysis, visualization, and process improvement, with a foundation in Computer Science & Software Engineering.",
             style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             textAlign: TextAlign.center, // Aligns the text properly
           ),
