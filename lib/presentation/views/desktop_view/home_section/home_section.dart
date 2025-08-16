@@ -136,13 +136,18 @@ class _OverviewState extends State<Overview>
           ),
         ),
         Text(
-          "BUSINESS ANALYTICS STUDENT @ LAMBTON COLLEGE",
+          "Business Analytics Graduate",
           style: GoogleFonts.raleway(
             fontSize: 13,
             fontWeight: FontWeight.w600,
             color: Colors.grey[700],
           ),
         ),
+        Text(
+          "Postgraduate Diploma – Lambton College, Ottawa (2023–2025)",
+          style: GoogleFonts.lato(fontSize: 13, color: Colors.black54),
+        ),
+
         SizedBox(height: 12),
 
         // Live Greeting with Fade-in Animation & Dynamic Color
@@ -200,7 +205,7 @@ class _OverviewState extends State<Overview>
 
         // About Section
         Text(
-          "I am a Computer Science & Software Engineering Graduate pursuing \nPost-Graduate In Business Analytics at Lambton College.",
+          "I am a recent Business Analytics Graduate from Lambton College, Ottawa,\n with a background in Computer Science & Software Engineering.",
           style: GoogleFonts.lato(
             fontSize: 14,
             fontWeight: FontWeight.w400,
