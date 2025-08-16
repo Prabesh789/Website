@@ -29,9 +29,10 @@ class _WorkAndAcademicState extends State<WorkAndAcademic> {
   final List<TimelineItem> educationList = [
     TimelineItem(
       title: 'Post-Graduate – Business Analytics, Lambton College',
-      date: 'Jan 2024 – Present (Ottawa ON, Canada)',
-      description:
-          'GPA: 3.62 | Studying BI tools, Software Testing, SQL, Data Visualization, Big Data & Statistical Analytics.',
+      date: 'Jan 2024 – Aug 2025 (Ottawa ON, Canada)',
+      description: 'Graduated with GPA: 3.62 | Dean’s List',
+      coursework:
+          'Business Analysis, BI Tools, Software Testing, SQL, Data Visualization, Big Data & Statistical Analytics.',
     ),
     TimelineItem(
       title:
@@ -77,28 +78,6 @@ class _WorkAndAcademicState extends State<WorkAndAcademic> {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Experience Column
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Experience",
-                        style: GoogleFonts.montserrat(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.2,
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      const SizedBox(height: 10),
-                      ...experienceList.map((item) => TimelineTile(item: item)),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 40),
-
                 // Education Column
                 Expanded(
                   child: Column(
@@ -116,6 +95,27 @@ class _WorkAndAcademicState extends State<WorkAndAcademic> {
                       ),
                       const SizedBox(height: 10),
                       ...educationList.map((item) => TimelineTile(item: item)),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 40),
+                // Experience Column
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Experience",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.2,
+                          color: Colors.black,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      const SizedBox(height: 10),
+                      ...experienceList.map((item) => TimelineTile(item: item)),
                     ],
                   ),
                 ),
@@ -238,11 +238,13 @@ class TimelineItem {
   final String title;
   final String date;
   final String description;
+  final String? coursework;
 
   TimelineItem({
     required this.title,
     required this.date,
     required this.description,
+    this.coursework,
   });
 }
 
@@ -290,6 +292,15 @@ class TimelineTile extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(
                   item.description,
+                  style: GoogleFonts.lato(
+                    fontSize: MediaQuery.of(context).size.width > 760 ? 14 : 12,
+                    color: Colors.black,
+                    height: 1.5, // Better line spacing
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  item.coursework ?? '',
                   style: GoogleFonts.lato(
                     fontSize: MediaQuery.of(context).size.width > 760 ? 14 : 12,
                     color: Colors.black,

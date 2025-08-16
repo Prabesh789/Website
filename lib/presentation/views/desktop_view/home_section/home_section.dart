@@ -145,7 +145,11 @@ class _OverviewState extends State<Overview>
         ),
         Text(
           "Postgraduate Diploma – Lambton College, Ottawa (2023–2025)",
-          style: GoogleFonts.lato(fontSize: 13, color: Colors.black54),
+          style: GoogleFonts.raleway(
+            fontSize: 13,
+            fontWeight: FontWeight.w600,
+            color: Colors.grey[700],
+          ),
         ),
 
         SizedBox(height: 12),
