@@ -37,8 +37,7 @@ class _AboutSectionState extends State<AboutSection> {
             child: SizedBox(
               width: width * 0.5,
               child: Text(
-                "I’m Prabesh Rai, currently pursuing Business Analytics at Lambton College in Ottawa. "
-                "I’m deeply passionate about turning data into actionable insights and exploring the power of machine learning to solve real-world problems.",
+                "I’m Prabesh Rai, a Business Analytics Graduate from Lambton College, Ottawa. I’m passionate about transforming complex data into actionable insights and applying machine learning to solve real-world business problems.",
                 style: GoogleFonts.lato(
                   fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,
                   color: Colors.black87,
@@ -52,8 +51,7 @@ class _AboutSectionState extends State<AboutSection> {
             child: SizedBox(
               width: width * 0.5,
               child: Text(
-                "I hold a Bachelor's degree in Computer Science & Software Engineering from the University of Bedfordshire (2022). "
-                "With experience in mobile app development, I specialize in building applications using Flutter and Dart.",
+                "I also hold a Bachelor’s degree in Computer Science & Software Engineering from the University of Bedfordshire (2022). With hands-on experience in mobile app development, I enjoy building practical solutions using Flutter and Dart, alongside my expertise in SQL, Python, Power BI, and Data Visualization.",
                 style: GoogleFonts.lato(
                   fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,
                   color: Colors.black87,
@@ -88,8 +86,7 @@ class _AboutSectionState extends State<AboutSection> {
             child: SizedBox(
               width: width * 0.5,
               child: Text(
-                "My current goal is to deepen my knowledge in Business/Data Analytics, while continuing my journey in Mobile App Development. "
-                "I aim to integrate these technologies to develop innovative, data-driven solutions that solve real-world problems.",
+                "My current focus is on launching my career in Business/Data Analytics, where I can apply my skills in data modeling, visualization, and predictive analysis to support decision-making. At the same time, I continue exploring app development and AI/ML projects, aiming to integrate technology and analytics into innovative, data-driven solutions that make a measurable impact.",
                 style: GoogleFonts.lato(
                   fontSize: MediaQuery.of(context).size.width > 760 ? 16 : 13,
                   color: Colors.black87,
