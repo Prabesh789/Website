@@ -31,7 +31,7 @@ class _MainSectionState extends State<MainSection> {
   final List<String> _sectionsName = [
     "HOME",
     "EXPERIENCE & EDUCATION",
-    "PROJECTS",
+    "PROJECTS & PUBLICATIONS",
     "ABOUT",
     "CONTACT",
   ];

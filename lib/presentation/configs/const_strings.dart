@@ -23,6 +23,16 @@ void launchURL(String url) async =>
 
 final List<Map<String, String>> kProjects = [
   {
+    'kProjectBanner': "assets/churn_analysis_summary.png",
+    'kProjectTitle': "Customer Churn Analysis",
+    'kProjectsDescription':
+        "Built a churn analysis dashboard with SQL, Python, and Power BI to uncover customer behavior patterns and reduce a 27% churn rate.",
+    'kProjectLink': "https://github.com/Prabesh789/churn-prediction-analysis",
+    'kProjectDashboard':
+        "https://app.powerbi.com/view?r=eyJrIjoiNzQ1Yjk1YmUtZTU4OC00OThjLWE2NjUtYjE0NDgyMDhjMzI2IiwidCI6ImI2NDE3Y2QwLTFmNzMtNDQ3MS05YTM5LTIwOTUzODIyYTM0YSIsImMiOjN9",
+  },
+
+  {
     'kProjectBanner': "assets/tourism_dashboard.png",
     'kProjectTitle': "Global Tourism Dashboard",
     'kProjectsDescription':
