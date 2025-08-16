@@ -84057,7 +84057,7 @@ B6(){var s=A.aw6(new A.eW(Date.now(),0,!1))
 if(s<12)return"\ud83c\udf1e Good Morning!"
 else if(s<18)return"\ud83c\udf24\ufe0f Good Afternoon!"
 else return"\ud83c\udf19 Good Evening!"},
-N(a){var s,r,q,p,o=this,n=null,m=o.a.e,l=A.aC("PRABESH RAI",n,n,n,n,A.cR(n,n,n,n,n,n,n,n,n,n,n,25,n,n,B.E,n,n,!0,n,n,n,n,n,n,n,n),n,n),k=A.aC("BUSINESS ANALYTICS GRADUATE @ POSTGRADUATE - LAMBTON COLLEGE (2024-2025)",n,n,n,n,A.cR(n,n,n,n,n,n,n,n,n,n,n,12,n,n,B.E,n,n,!0,n,n,n,n,n,n,n,n),n,n),j=A.a7(n,14,n),i=o.f?1:0,h=A.bp(0,0,2),g=o.e
+N(a){var s,r,q,p,o=this,n=null,m=o.a.e,l=A.aC("PRABESH RAI",n,n,n,n,A.cR(n,n,n,n,n,n,n,n,n,n,n,25,n,n,B.E,n,n,!0,n,n,n,n,n,n,n,n),n,n),k=A.aC("BUSINESS ANALYTICS GRADUATE \nPOSTGRADUATE - LAMBTON COLLEGE (2024-2025)",n,n,n,n,A.cR(n,n,n,n,n,n,n,n,n,n,n,12,n,n,B.E,n,n,!0,n,n,n,n,n,n,n,n),n,n),j=A.a7(n,14,n),i=o.f?1:0,h=A.bp(0,0,2),g=o.e
 g===$&&A.a()
 i=A.auT(A.jE(g,new A.ao6(o),n),B.ae,h,i)
 h=A.a7(n,16,n)
@@ -84068,7 +84068,7 @@ for(q=0;q<2;++q)r.push(new A.nI(B.eS[q],B.eQ[q],20,n))
 g=A.a7(A.cA(r,B.y,B.a0,B.D,0),g*0.05,n)
 r=A.a7(n,14,n)
 p=o.a.d
-return A.cF(A.b([l,k,j,i,h,g,r,A.a7(A.aC("Business Analytics Graduate specializing in data analysis, visualization, and process improvement, with a foundation in Computer Science & Software Engineering.",n,n,n,n,A.cR(n,n,n,n,n,n,n,n,n,n,n,13,n,n,B.ab,n,n,!0,n,n,n,n,n,n,n,n),B.aO,n),n,p*0.8),A.a7(n,16,n),A.LW(!1,!0,A.aC("Learn more ->",n,n,n,n,A.kI().$3$color$fontSize$fontWeight(B.hL,13,B.ab),n,n),n,!0,n,n,n,n,n,n,n,n,n,new A.ao7(),n,n,n,n)],s),m,B.a0,B.D)}}
+return A.cF(A.b([l,k,j,i,h,g,r,A.a7(A.aC("Business Analytics Graduate specializing in business analysis, visualization, and process improvement, with a foundation in Computer Science & Software Engineering.",n,n,n,n,A.cR(n,n,n,n,n,n,n,n,n,n,n,13,n,n,B.ab,n,n,!0,n,n,n,n,n,n,n,n),B.aO,n),n,p*0.8),A.a7(n,16,n),A.LW(!1,!0,A.aC("Learn more ->",n,n,n,n,A.kI().$3$color$fontSize$fontWeight(B.hL,13,B.ab),n,n),n,!0,n,n,n,n,n,n,n,n,n,new A.ao7(),n,n,n,n)],s),m,B.a0,B.D)}}
 A.aoc.prototype={
 $0(){var s=this.a
 s.a6(new A.aoa(s))},
